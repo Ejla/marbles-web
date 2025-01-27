@@ -140,92 +140,6 @@
       text-decoration: underline;
       color: var(--primary-400);
     }
-
-    /* Modal styles */
-    .modal {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: 1000;
-      overflow-y: auto;
-    }
-
-    .modal-content {
-      background-color: #fff;
-      margin: 2rem auto;
-      padding: 2rem;
-      width: 90%;
-      max-width: 800px;
-      border-radius: 8px;
-      position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 0.5rem;
-      color: #666;
-    }
-
-    .modal-close:hover {
-      color: #000;
-    }
-
-    .modal.active {
-      display: block;
-    }
-
-    /* Policy content styles */
-    .policy-content {
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .policy-content h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .policy-content h2 {
-      font-size: 1.5rem;
-      margin: 2rem 0 1rem;
-    }
-
-    .policy-content h3 {
-      font-size: 1.2rem;
-      margin: 1.5rem 0 0.75rem;
-    }
-
-    .policy-content p,
-    .policy-content ul,
-    .policy-content ol {
-      margin-bottom: 1rem;
-    }
-
-    .policy-content ul,
-    .policy-content ol {
-      padding-left: 1.5rem;
-    }
-
-    .policy-content li {
-      margin-bottom: 0.5rem;
-    }
-
-    .policy-content a {
-      color: var(--primary-400);
-      text-decoration: underline;
-    }
   </style>
 </head>
 
@@ -233,7 +147,9 @@
   <header class="header">
     <nav class="nav-container">
       <div class="logo">
-        <img src="img/marbles-logo.svg" alt="Marbles" />
+        <a href="#top">
+          <img src="img/marbles-logo.svg" alt="Marbles" />
+        </a>
       </div>
       <button class="mobile-menu-btn" aria-label="Toggle menu">
         <span></span>
@@ -241,10 +157,9 @@
         <span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#hero">HOME</a></li>
         <li><a href="#features">ABOUT</a></li>
         <li><a href="#benefits">WHY MARBLES?</a></li>
-        <li><a href="#cta" class="login-btn">START FOR FREE</a></li>
+        <li><a href="#cta" class="login-btn">GET EARLY ACCESS</a></li>
       </ul>
     </nav>
   </header>
@@ -371,11 +286,10 @@
       <div class="backdrop"></div>
       <div class="container">
         <div class="cta-content">
-          <h2>Get Your Marbles For Free!</h2>
+          <h2>Get Early Access to Marbles!</h2>
 
-          <p>We're launching soon, and we'd love for you to try it out first!<br />Enjoy exclusive
-            <strong>early access for free</strong> - just <strong>sign up for our newsletter</strong>, and
-            we'll send you access code as soon as Marbles is ready.
+          <p>Be the first to try Marbles during our closed beta — it’s free!<br />Subscribe to our newsletter, and we’ll
+            send you an exclusive access code as soon as we launch.
           </p>
           <div class="sib-form" style="text-align: center;
                 background-color: transparent;">

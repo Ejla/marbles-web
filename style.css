@@ -225,7 +225,7 @@ h3 {
     font-size: 2rem;
     font-weight: 500;
     color: var(--primary-color);
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     text-align: left;
     line-height: 1.2;
   }
@@ -450,6 +450,8 @@ img.hero-title {
 .cta-content {
   max-width: 800px;
   margin: 0 auto;
+  text-wrap: pretty;
+  font-weight: 500;
 }
 
 .signup-form {
@@ -620,7 +622,7 @@ img.hero-title {
     left: 0;
     width: 100%;
     background: white;
-    padding: 1rem;
+    padding: 2rem 1rem 3rem;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -640,6 +642,9 @@ img.hero-title {
     h1 {
       transform: none;
       font-size: 36px;
+    }
+    h2 {
+      margin-top: 1.5rem;
     }
   }
   img.hero-title {
@@ -721,109 +726,6 @@ img.hero-title {
     align-items: center;
     gap: 1rem;
   }
-}
-
-#sib-container input:-ms-input-placeholder {
-  text-align: left;
-  font-family: "Figtree", sans-serif;
-  color: var(--neutral-150);
-}
-#sib-container input {
-  padding: 1rem 1.5rem;
-  border: none;
-  border-radius: 99px;
-  width: 100%;
-  font-size: 1rem;
-  height: auto;
-  background-color: #fff;
-  line-height: 1.5rem;
-  &:focus,
-  &:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.5);
-  }
-}
-#sib-container form {
-  display: flex;
-  gap: 1rem;
-}
-.sib-form .entry__field:focus-within {
-  box-shadow: none;
-}
-.sib-form-block__button {
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 99px;
-  background: var(--dark-color);
-  color: white;
-  font-weight: 500;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-  text-decoration: none;
-  line-height: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  #sib-container form {
-    flex-direction: column;
-  }
-  .xx-button {
-    flex: 1;
-  }
-  .sib-form-block__button {
-    width: 100%;
-  }
-}
-.sib-form .entry__field {
-  -webkit-align-items: center;
-  align-items: center;
-  background: transparent;
-  border: none;
-  display: -webkit-inline-flex;
-  display: inline-flex;
-  margin: 0;
-  max-width: 100%;
-}
-.sib-form-block {
-  padding: 0;
-}
-.xx-input {
-  flex: 1;
-}
-#error-message.sib-form-message-panel.sib-form-message-panel--active {
-  font-size: 1rem;
-  text-align: left;
-  font-family: "Figtree", sans-serif !important;
-  color: #993344 !important;
-  background-color: #ffeded;
-  border-radius: 3px;
-  border-color: transparent !important;
-  max-width: 800px !important;
-}
-.entry__error.entry__error--primary {
-  background-color: transparent;
-  font-size: 0.9rem;
-  color: #661d1d;
-  font-family: "Figtree", sans-serif;
-}
-
-#sib-container input::placeholder {
-  text-align: left;
-  font-family: "Figtree", sans-serif;
-  color: var(--neutral-150);
-}
-
-#sib-container textarea::placeholder {
-  text-align: left;
-  font-family: "Figtree", sans-serif;
-  color: var(--neutral-150);
-}
-
-#sib-container a {
-  text-decoration: underline;
-  color: var(--primary-400);
 }
 
 /* Modal styles */
