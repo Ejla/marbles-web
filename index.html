@@ -1,589 +1,519 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Marbles - All your everyday tools collected in one handy app. Manage lists, inventory, and notes with ease.">
-  <meta name="keywords" content="task management, list organization, inventory tracking, productivity app">
-  <meta name="author" content="Marbles">
-  <meta property="og:title" content="Marbles - A Simple App for Life's Little Details">
-  <meta property="og:description"
-    content="All your everyday tools collected in one handy app. Manage lists, inventory, and notes with ease.">
-  <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
-  <link rel="shortcut icon" href="./favicons/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Marbles" />
-  <link rel="manifest" href="./site.webmanifest" />
-  <title>Marbles - A Simple App for Life's Little Details</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-  <style>
-    #sib-container input:-ms-input-placeholder {
-      text-align: left;
-      font-family: 'Figtree', sans-serif;
-      color: var(--neutral-150);
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marbles - Your All-in-One Mind Decluttering Companion</title>
+    <meta name="description"
+      content="All-in-one tool for journaling, tracking habits, managing simple lists and jotting down random thoughts." />
+    <meta name="author" content="Infonominal" />
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="./favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicons/favicon.svg" />
+    <link rel="shortcut icon" href="./favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Marbles" />
+    <link rel="manifest" href="./site.webmanifest" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet">
 
-    #sib-container input {
-      padding: 1rem 1.5rem;
-      border: none;
-      border-radius: 99px;
-      width: 100%;
-      font-size: 1rem;
-      height: auto;
-      background-color: #fff;
-      line-height: 1.5rem;
-
-      &:focus,
-      &:focus-visible {
-        outline: none;
-        box-shadow: 0 0 0 2px rgba(0, 0, 0, .5);
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <style>
+      #sib-container input:-ms-input-placeholder {
+        text-align: left;
+        font-family: 'Figtree', sans-serif;
       }
-    }
 
-    #sib-container form {
-      display: flex;
-      gap: 1rem;
-    }
+      #sib-container input {
+        padding: 1rem 1.5rem;
+        border: none;
+        border-radius: 99px;
+        width: 100%;
+        font-size: 1rem;
+        height: auto;
+        background-color: #fff;
+        line-height: 1.5rem;
 
-    .sib-form .entry__field:focus-within {
-      box-shadow: none;
-    }
+        &:focus,
+        &:focus-visible {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, .5);
+        }
+      }
 
-    .sib-form-block__button {
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 99px;
-      background: var(--dark-color);
-      color: white;
-      font-weight: 500;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      white-space: nowrap;
-      text-decoration: none;
-      line-height: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
       #sib-container form {
-        flex-direction: column;
+        display: flex;
+        gap: 1rem;
       }
 
-      .xx-button {
-        flex: 1;
+      .sib-form .entry__field:focus-within {
+        box-shadow: none;
       }
 
       .sib-form-block__button {
-        width: 100%
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 99px;
+        border: 1px solid white;
+        color: white;
+        background-color: #cb3a60;
+
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        white-space: nowrap;
+        text-decoration: none;
+        line-height: 1.5rem;
+
+        &:hover {
+          background-color: #9b2342;
+        }
       }
-    }
 
-    .sib-form .entry__field {
-      -webkit-align-items: center;
-      align-items: center;
-      background: transparent;
-      border: none;
-      display: -webkit-inline-flex;
-      display: inline-flex;
-      margin: 0;
-      max-width: 100%;
-    }
+      @media (max-width: 768px) {
+        #sib-container form {
+          flex-direction: column;
+        }
 
-    .sib-form-block {
-      padding: 0;
-    }
+        .xx-button {
+          flex: 1;
+        }
 
-    .xx-input {
-      flex: 1;
-    }
+        .sib-form-block__button {
+          width: 100%
+        }
+      }
 
-    #error-message.sib-form-message-panel.sib-form-message-panel--active {
-      font-size: 1rem;
-      text-align: left;
-      font-family: 'Figtree', sans-serif !important;
-      color: #993344 !important;
-      background-color: #ffeded;
-      border-radius: 3px;
-      border-color: transparent !important;
-      max-width: 800px !important;
-    }
+      .sib-form .entry__field {
+        -webkit-align-items: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        margin: 0;
+        max-width: 100%;
+      }
 
-    .entry__error.entry__error--primary {
-      background-color: transparent;
-      font-size: .9rem;
-      color: #661d1d;
-      font-family: 'Figtree', sans-serif;
-    }
+      .sib-form-block {
+        padding: 0;
+      }
 
-    #sib-container input::placeholder {
-      text-align: left;
-      font-family: 'Figtree', sans-serif;
-      color: var(--neutral-150);
-    }
+      .xx-input {
+        flex: 1;
+      }
 
-    #sib-container textarea::placeholder {
-      text-align: left;
-      font-family: 'Figtree', sans-serif;
-      color: var(--neutral-150);
-    }
+      #error-message.sib-form-message-panel.sib-form-message-panel--active {
+        font-size: 1rem;
+        text-align: left;
+        font-family: 'Figtree', sans-serif !important;
+        color: #993344 !important;
+        background-color: #ffeded;
+        border-radius: 1rem !important;
+        border-color: transparent !important;
+        max-width: 800px !important;
+      }
 
-    #sib-container a {
-      text-decoration: underline;
-      color: var(--primary-400);
-    }
-  </style>
-</head>
+      .entry__error.entry__error--primary {
+        background-color: transparent;
+        font-size: .9rem;
+        color: #f3e9eb;
+        font-family: 'Figtree', sans-serif;
+      }
 
-<body>
-  <header class="header">
-    <nav class="nav-container">
-      <div class="logo">
-        <a href="#top">
-          <img src="img/marbles-logo.svg" alt="Marbles" />
-        </a>
-      </div>
-      <button class="mobile-menu-btn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#features">ABOUT</a></li>
-        <li><a href="#benefits">WHY MARBLES?</a></li>
-        <li><a href="#cta" class="login-btn">GET EARLY ACCESS</a></li>
-      </ul>
-    </nav>
-  </header>
+      #sib-container input::placeholder {
+        text-align: left;
+        font-family: 'Figtree', sans-serif;
+        color: var(--neutral-150);
+      }
 
-  <main>
-    <section id="hero" class="hero">
-      <div class="container">
-        <div class="hero-ellipse">
-          <img src="img/ellipse.svg">
+      #sib-container textarea::placeholder {
+        text-align: left;
+        font-family: 'Figtree', sans-serif;
+        color: var(--neutral-150);
+      }
+
+      #sib-container a {
+        text-decoration: underline;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="container header-container">
+        <div class="logo">
+          <img src="img/marbles-logo.svg" alt="Marbles Logo" class="logo-image" />
         </div>
+        <nav class="nav-links">
+          <a href="#features">Features</a>
+          <!-- <a href="#plans">Plans</a> -->
+          <a href="#">Blog</a>
+          <a href="#early-access" class="btn btn-secondary">Get Early Access</a>
+        </nav>
+        <button class="mobile-menu-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16"></path>
+            <path d="M4 12h16"></path>
+            <path d="M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
 
-        <img class="hero-title" src="img/hero-keep-your.svg" alt="Keep Your Marbles" />
-
-        <div class="hero-content">
-          <h1>Marbles</h1>
-          <h2>A Simple App for Life's Little Details</h2>
-          <p class="hero-text">
-            Life moves fast, and it's easy to lose track of the small stuff - like picking up eggs, calling
-            the plumber, or remembering where you left that spare key.
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1 class="animate-fade-in">Marbles: Your All-in-One Mind Decluttering Companion</h1>
+          <p class="hero-description animate-fade-in animation-delay-400">
+            A lightweight, friendly app to quickly capture what's on
+            your mind so you can free up space in your head.
           </p>
 
-          <p class="hero-text">
-            That's where Marbles comes in.<br>
-            No endless features, no complex workflows - just a <strong>lightweight, friendly app to quickly
-              capture what's on your mind</strong> so you can free up space in your head.
-          </p>
-          <div class="hero-cta"><a href="#cta" class="cta-button">GET EARLY ACCESS</a></div>
+          <div class="tags animate-fade-in animation-delay-200">
+
+            <div class="tag-container">
+              <span class="tag"><img src="img/journal.svg" /><span>Journal</span></span>
+              <span class="tag"><img src="img/habit.svg" /><span>Habit tracker</span></span>
+              <span class="tag"><img src="img/list.svg" /><span>Lists</span></span>
+              <span class="tag"><img src="img/note.svg" /><span>Notes</span></span>
+            </div>
+          </div>
+
+
+          <a href="#early-access" class="btn btn-primary animate-fade-in animation-delay-300">GET EARLY ACCESS</a>
+
+
+
+
         </div>
 
-        <div class="hero-image">
-          <img src="img/marbles-hero.png" alt="Person using the Marbles app">
-          <div class="floating-features">
-            <div class="feature-bubble">
-              <span class="icon">📱</span>
-              Plumber's phone number
-            </div>
-            <div class="feature-bubble">
-              <span class="icon">🎂</span>
-              Pick up the cake
-            </div>
-            <div class="feature-bubble">
-              <span class="icon">🛍️</span>
-              Buy eggs
-            </div>
+      </section>
+      <section class="hero-image-section">
+        <div class="section-heading">
+          <h2>Offload your thoughts, clear your mind</h2>
+          <p>Easy to use, no complex workflows. Just open the app and get started.</p>
+        </div>
+
+        <div class="hero-image animate-fade-in animation-delay-500">
+          <div class="hero-image-placeholder">
+            <img src="img/marbles-screen.webp" alt="Marbles App Screenshot" class="hero-image-screenshot" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="features" class="features">
-      <div class="container">
-        <h2>What Does Marbles Do?</h2>
-        <p class="section-intro">We keep it simple because life's little details shouldn't feel like a big
-          deal.<br />Here's how Marbles helps:</p>
-
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon"><img src="img/list.svg" alt="List" /></div>
-            <h3>Quick List Management</h3>
-            <p>Capture grocery lists, to-dos, or packing lists in seconds. Reorder, tag, check off, and pin
-              your most important lists with ease.</p>
+      <section id="features">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Life can be overwhelming, and your mind deserves a break.</h2>
+            <p>Marbles helps you offload your thoughts, stay organized, and build better habits—all in one secure,
+              user-friendly app.</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon"><img src="img/note.svg" alt="Note" /></div>
-            <h3>Simple Notes</h3>
-            <p>Jot down ideas, quick notes, or anything floating in your head that is important for you to
-              remember — no categories or folders needed.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><img src="img/storage.svg" alt="Storage" /></div>
-            <h3>Minimal Inventory Tracking</h3>
-            <p>Need to remember where you stored the holiday decorations or the spare batteries? Marbles has
-              you covered — no spreadsheets required.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><img src="img/share.svg" alt="Share" /></div>
-            <h3>Share and Collaborate</h3>
-            <p>Share your lists, notes, and inventory with family members so everyone stays on the same
-              page. You don't have to juggle it all by yourself.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="benefits" class="benefits">
-      <div class="container">
-        <h2>Why You'll Love It</h2>
-        <p class="section-intro">With Marbles, everything is designed to make your day a little smoother:</p>
-
-        <div class="benefits-grid">
-          <div class="benefit-item">
-            <div class="benefit-title">
-              <img class="benefit-icon" src="img/flowers.svg" alt="Flowers" />
-              <h3>Simple Intuitive Design</h3>
-            </div>
-            <p> Marbles is designed for everyday moments, not project planning or time management, so it's
-              very easy to use, no learning curve. Just open the app and get started.</p>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-title">
-              <img class="benefit-icon" src="img/puzzle.svg" alt="Puzzle" />
-              <h3>All-in-One Convenience</h3>
-            </div>
-            <p>One place for everything, so you'll never lose track of life's small, but important, details.
-            </p>
-          </div>
-          <div class="benefit-item">
-            <div class="benefit-title">
-              <img class="benefit-icon" src="img/lotus.svg" alt="Lotus" />
-              <h3>Stay Organized, Stay Calm</h3>
-            </div>
-            <p>Free your mind from the clutter without overthinking - stay calm, even when life feels busy.
-            </p>
-          </div>
-        </div>
-        <div class="app-preview">
-          <img src="img/marbles-screen.jpg" alt="Marbles app interface preview">
-        </div>
-      </div>
-    </section>
-
-    <section id="cta" class="cta">
-      <div class="backdrop"></div>
-      <div class="container">
-        <div class="cta-content">
-          <h2>Get Early Access to Marbles!</h2>
-
-          <p>Be the first to try Marbles during our closed beta — it’s free!<br />Subscribe to our newsletter, and we’ll
-            send you an exclusive access code as soon as we launch.
-          </p>
-          <div class="sib-form" style="text-align: center;
-                background-color: transparent;">
-            <div id="sib-form-container" class="sib-form-container">
-              <div id="error-message" class="sib-form-message-panel"
-                style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
-                <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                  <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                    <path
-                      d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
-                  </svg>
-                  <span class="sib-form-message-panel__inner-text">
-                    Your subscription could not be saved. Please try again.
-                  </span>
-                </div>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-header">
+                <img src="img/girl.webp" alt="Journaling" />
+                <h3>Journal Your Thoughts</h3>
               </div>
 
-              <div id="success-message" class="sib-form-message-panel"
-                style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
-                <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-                  <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
-                    <path
-                      d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-                  </svg>
-                  <span class="sib-form-message-panel__inner-text">
-                    Your subscription has been successful. We will let you know as soon as Marbles is ready
-                    for you.
-                  </span>
-                </div>
+              <p class="mb-4">Whether it's a fleeting thought, a daily reflection, or a moment of gratitude, capture it
+                all effortlessly in the online journal.</p>
+              <p>Your entries are stored securely, giving you peace of mind as you express yourself freely.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-header">
+                <img src="img/ideas.webp" alt="Organizer" />
+                <h3>Sort Out the Clutter</h3>
               </div>
 
-              <div id="sib-container" class="sib-container--large sib-container--vertical"
-                style="text-align:center; background-color:transparent; max-width:600px; direction:ltr">
-                <form id="sib-form" method="POST"
-                  action="https://sibforms.com/serve/MUIFACFQMteTVuJNn_ytrfhGsaWCMUQ0vPAYfsJYC7BEdJA5tcfB41SUbkPBz68D18FNnQjHWZkDthiONi0VZpOjtxhPTQnUTS_vuVuqzkv2ZYvrYHo4KvMzlceCEtkHfTIFnYhoghkjZLx7NEEddpU5uPBjgLASbswjNiF_0u4Mi8pXs03aLNqbekSkFFrw0gYWEuEn3stenVZS"
-                  data-type="subscription">
-                  <div class="xx-input">
-                    <div class="sib-input sib-form-block">
-                      <div class="form__entry entry_block">
-                        <div class="form__label-row ">
+              <p class="mb-4">Keep track of your tasks, and ideas with simple lists and notes.
+              </p>
+              <p>Marbles combines practical tools with thoughtful reflection so your mind stays clear, not cluttered.
+              </p>
+            </div>
 
-                          <div class="entry__field">
-                            <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off"
-                              placeholder="Your email address" data-required="true" required />
+            <div class="feature-card">
+              <div class="feature-header">
+                <img src="img/habit.webp" alt="Habit tracking" />
+                <h3>Build Habits That Stick</h3>
+              </div>
+              <p class="mb-4">Turn small actions into lasting change with easy-to-use habit tracking.</p>
+              <p>Check off your daily wins, stay motivated, and see your progress grow over time.</p>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-header">
+                <img src="img/privacy.webp" alt="Privacy" />
+                <h3>Your Privacy, Our Priority</h3>
+              </div>
+              <p class="mb-4">We take your data seriously. Marbles uses strong encryption to keep your thoughts and
+                information safe.</p>
+              <p>With our advanced security features, only you can access your data - no one else, not
+                even us.</p>
+            </div>
+          </div>
+
+          <div class="why-choose">
+            <h3>Why Choose Marbles?</h3>
+            <div class="benefits-grid">
+              <div class="benefit-card">
+                <div class="benefit-card-header">
+                  <img src="img/puzzle.svg" alt="Puzzle Icon" class="benefit-icon" />
+                  <h4>All-in-One Convenience</h4>
+                </div>
+                <p>Journal, habits, lists and notes — no need for separate apps</p>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-card-header">
+                  <img src="img/flowers.svg" alt="Lotus Icon" class="benefit-icon" />
+                  <h4>Intuitive Design</h4>
+                </div>
+                <p>Easy to use, no learning curve. Just open the app and get started.</p>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-card-header">
+                  <img src="img/keyhole.svg" alt="Puzzle Icon" class="benefit-icon" />
+                  <h4>Real Privacy</h4>
+                </div>
+
+                <p>Built with modern encryption and user-first data practices</p>
+              </div>
+
+              <div class="benefit-card">
+                <div class="benefit-card-header">
+                  <img src="img/lotus.svg" alt="Lotus Icon" class="benefit-icon" />
+                  <h4>Designed for Peace of Mind</h4>
+                </div>
+                <p>Simple, clean, and calming to use</p>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="plans">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Choose Your Plan</h2>
+          </div>
+
+          <div class="plans-grid">
+            <div class="plan-card">
+              <div class="plan-header">
+                <div>
+                  <div class="plan-type">Free Plan</div>
+                </div>
+                <div class="plan-price">$0</div>
+              </div>
+
+              <ul class="plan-features">
+                <li class="plan-feature">
+                  <span class="check-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>Limit of 20 entries per feature</span>
+                </li>
+                <li class="plan-feature">
+                  <span class="check-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>Standard security (database encryption)</span>
+                </li>
+              </ul>
+
+              <a href="#early-access" class="btn btn-secondary"
+                style="display: block; width: 100%; margin-top: auto;">Get Started</a>
+            </div>
+
+            <div class="plan-card">
+              <div class="plan-header">
+                <div>
+                  <div class="plan-type">Premium Plan</div>
+                  <div class="plan-popular">Most Popular</div>
+                </div>
+                <div class="plan-price">$9/month</div>
+              </div>
+
+              <ul class="plan-features">
+                <li class="plan-feature">
+                  <span class="check-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>Unlimited entries</span>
+                </li>
+                <li class="plan-feature">
+                  <span class="check-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                  <span>Advanced security</span>
+                </li>
+              </ul>
+
+              <a href="#early-access" class="btn btn-primary" style="display: block; width: 100%;">Get Premium</a>
+            </div>
+          </div>
+
+          <p class="plan-note">Start free. Upgrade when you're ready.</p>
+          <p class="plans-tagline">Marbles helps you get things out of your head—and keep them safe.</p>
+        </div>
+      </section> -->
+
+      <section id="early-access" style="margin-top: -3rem;">
+        <div class="container early-access-container">
+          <div class="early-access-box">
+            <div class="early-access-intro">
+              <h2>Get Early Access!</h2>
+              <p>Be the first to try Marbles during our closed beta — it's free!</p>
+              <p>Subscribe to our newsletter, and we'll send you an exclusive access code as soon as we launch.</p>
+            </div>
+
+
+            <div class="sib-form" style="text-align: center;
+                            background-color: transparent;">
+              <div id="sib-form-container" class="sib-form-container">
+                <div id="error-message" class="sib-form-message-panel"
+                  style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                      <path
+                        d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                    </svg>
+                    <span class="sib-form-message-panel__inner-text">
+                      Your subscription could not be saved. Please try again.
+                    </span>
+                  </div>
+                </div>
+
+                <div id="success-message" class="sib-form-message-panel"
+                  style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                      <path
+                        d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                    </svg>
+                    <span class="sib-form-message-panel__inner-text">
+                      Your subscription has been successful. We will let you know as soon as Marbles is ready
+                      for you.
+                    </span>
+                  </div>
+                </div>
+
+                <div id="sib-container" class="sib-container--large sib-container--vertical"
+                  style="text-align:center; background-color:transparent; max-width:600px; direction:ltr">
+                  <form id="sib-form" method="POST"
+                    action="https://sibforms.com/serve/MUIFACFQMteTVuJNn_ytrfhGsaWCMUQ0vPAYfsJYC7BEdJA5tcfB41SUbkPBz68D18FNnQjHWZkDthiONi0VZpOjtxhPTQnUTS_vuVuqzkv2ZYvrYHo4KvMzlceCEtkHfTIFnYhoghkjZLx7NEEddpU5uPBjgLASbswjNiF_0u4Mi8pXs03aLNqbekSkFFrw0gYWEuEn3stenVZS"
+                    data-type="subscription">
+                    <div class="xx-input">
+                      <div class="sib-input sib-form-block">
+                        <div class="form__entry entry_block">
+                          <div class="form__label-row ">
+
+                            <div class="entry__field">
+                              <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off"
+                                placeholder="Your email address" data-required="true" required />
+                            </div>
                           </div>
-                        </div>
 
-                        <label class="entry__error entry__error--primary">
-                        </label>
+                          <label class="entry__error entry__error--primary">
+                          </label>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="xx-button">
-                    <div class="sib-form-block" style="text-align: left">
-                      <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form"
-                        type="submit">
-                        <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
-                          viewBox="0 0 512 512">
-                          <path
-                            d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
-                        </svg>
-                        GET EARLY ACCESS
-                      </button>
-                    </div>
+                    <div class="xx-button">
+                      <div class="sib-form-block" style="text-align: left">
+                        <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form"
+                          type="submit">
+                          <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon"
+                            viewBox="0 0 512 512">
+                            <path
+                              d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                          </svg>
+                          GET EARLY ACCESS
+                        </button>
+                      </div>
 
-                    <input type="text" name="email_address_check" value="" class="input--hidden">
-                    <input type="hidden" name="locale" value="en">
-                </form>
+                      <input type="text" name="email_address_check" value="" class="input--hidden">
+                      <input type="hidden" name="locale" value="en">
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
-  </main>
+    <footer>
+      <div class="container footer-container">
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
 
         <div class="footer-links">
-          <a href="#" data-modal="privacy-policy">Privacy Policy</a>
-          <a href="#" data-modal="cookie-policy">Cookie Policy</a>
+          <a href="privacy-policy.html" target="_blank">Privacy</a>
+          <a href="terms.html" target="_blank">Terms</a>
           <a href="#" data-modal="credits">Credits</a>
         </div>
-        <p class="copyright"><span id="current-year"></span> <a href="https://www.infonominal.com/"
-            target="_blank">Infonominal</a>. All rights reserved.</p>
+
+
+        <div class="copyright">
+          <span id="current-year"></span> <a href="https://www.infonominal.com/" target="_blank">© Infonominal</a>
+          &nbsp;All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Credits Modal -->
+    <div id="credits" class="modal">
+      <div class="modal-content standard-content">
+        <button class="modal-close">&times;</button>
+        <h3 style="margin-top: 0;">Credits</h3>
+        <p>We want to thank:</p>
+        <ul>
+          <li><a href="https://www.streamlinehq.com/" target="_blank">Streamline</a> for generously
+            providing their artwork.</li>
+        </ul>
+
       </div>
     </div>
-  </footer>
 
-  <!-- Privacy Policy Modal -->
-  <div id="privacy-policy" class="modal">
-    <div class="modal-content policy-content">
-      <button class="modal-close">&times;</button>
-      <h1>Privacy Policy</h1>
-      <p><strong>Effective Date:</strong> March 19, 2024.</p>
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 
-      <p>Infonominal d.o.o. ("we," "our," or "us") is committed to protecting and respecting your privacy. This Privacy
-        Policy explains how we collect, use, and protect your personal data in compliance with the General Data
-        Protection Regulation (GDPR).</p>
+    <script>
+      // Header scroll effect
+      window.addEventListener('scroll', function () {
+        const header = document.getElementById('header');
+        if (window.scrollY > 10) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+      });
 
-      <h2>1. Data Controller</h2>
-      <p>The data controller responsible for your personal data is:</p>
-      <address>
-        Infonominal d.o.o.<br>
-        Ulica Brune Busica 36<br>
-        10020 Zagreb, Croatia<br>
-        Email: privacy@infonominal.com
-      </address>
-
-      <h2>2. Data We Collect</h2>
-      <p>We may collect and process the following personal data:</p>
-      <ul>
-        <li><strong>Email Address:</strong> When you subscribe to our mailing list.</li>
-        <li><strong>Usage Data:</strong> Collected through Google Analytics, which may include your IP address, browser
-          type, pages visited, and other similar data.</li>
-      </ul>
-
-      <h2>3. How We Use Your Data</h2>
-      <p>We use your data for the following purposes:</p>
-      <ul>
-        <li><strong>Email Address:</strong> To send newsletters, updates, and promotional materials, with your consent.
-        </li>
-        <li><strong>Usage Data:</strong> To analyze website traffic and improve our website’s functionality and user
-          experience.</li>
-      </ul>
-
-      <h2>4. Legal Basis for Processing</h2>
-      <p>We process your data based on:</p>
-      <ul>
-        <li><strong>Consent:</strong> For collecting and processing your email address for the mailing list.</li>
-        <li><strong>Legitimate Interests:</strong> For analyzing usage data through Google Analytics to improve our
-          website.</li>
-      </ul>
-
-      <h2>5. Data Sharing</h2>
-      <p>We may share your data with the following third parties:</p>
-      <ul>
-        <li><strong>Brevo (formerly Sendinblue):</strong> For managing our mailing list subscriptions and email
-          communications. Brevo’s privacy policy is available at [Brevo’s Privacy Policy URL].</li>
-        <li><strong>Google Analytics:</strong> For analyzing website usage. Google’s privacy policy is available at
-          [Google’s Privacy Policy URL].</li>
-      </ul>
-      <p>We do not sell your personal data to third parties.</p>
-
-      <h2>6. Data Retention</h2>
-      <p>We retain your data as follows:</p>
-      <ul>
-        <li><strong>Email Address:</strong> Until you unsubscribe from the mailing list or request deletion.</li>
-        <li><strong>Usage Data:</strong> For a period defined by Google Analytics’ default retention settings.</li>
-      </ul>
-
-      <h2>7. Your Rights</h2>
-      <p>Under the GDPR, you have the following rights:</p>
-      <ul>
-        <li><strong>Right to Access:</strong> Request access to your personal data.</li>
-        <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data.</li>
-        <li><strong>Right to Erasure:</strong> Request deletion of your personal data.</li>
-        <li><strong>Right to Restrict Processing:</strong> Request limitation of data processing.</li>
-        <li><strong>Right to Data Portability:</strong> Request transfer of your data to another service provider.</li>
-        <li><strong>Right to Object:</strong> Object to data processing based on legitimate interests or direct
-          marketing.</li>
-        <li><strong>Right to Withdraw Consent:</strong> Withdraw your consent at any time for email communications.</li>
-      </ul>
-      <p>To exercise any of these rights, please contact us at [Insert Contact Email].</p>
-
-      <h2>8. Data Security</h2>
-      <p>We implement appropriate technical and organizational measures to protect your personal data from unauthorized
-        access, alteration, disclosure, or destruction.</p>
-
-      <h2>9. Cookies and Tracking</h2>
-      <p>We use cookies for website functionality and to analyze user behavior via Google Analytics. For more
-        information, please see our [Cookie Policy].</p>
-
-      <h2>10. Complaints</h2>
-      <p>If you believe your data has been processed unlawfully, you have the right to lodge a complaint with your local
-        data protection authority or the Croatian Personal Data Protection Agency (AZOP).</p>
-
-      <h2>11. Changes to This Policy</h2>
-      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated
-        effective date.</p>
-
-      <h2>12. Contact Us</h2>
-      <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-      <address>
-        Infonominal d.o.o.<br>
-        Ulica Brune Busica 36<br>
-        10020 Zagreb, Croatia<br>
-        Email: privacy@infonominal.com
-      </address>
-    </div>
-  </div>
-
-  <!-- Cookie Policy Modal -->
-  <div id="cookie-policy" class="modal">
-    <div class="modal-content policy-content">
-      <button class="modal-close">&times;</button>
-      <h1>Cookie Policy</h1>
-      <p>Effective Date: March 19, 2024</p>
-
-      <p>This Cookie Policy explains how Infonominal d.o.o. ("we," "our," or "us") uses cookies and similar technologies
-        on our website. By continuing to browse or use our website, you agree to the use of cookies as described in this
-        policy.</p>
-
-      <h2>What Are Cookies?</h2>
-      <p>Cookies are small text files placed on your device to store information about your preferences or actions on a
-        website. Cookies enable websites to recognize your device and improve your browsing experience.</p>
-
-      <h2>Types of Cookies We Use</h2>
-      <h3>Essential Cookies</h3>
-      <p>These cookies are necessary for the website to function properly and cannot be disabled in our systems. They
-        are typically set in response to actions made by you, such as setting privacy preferences or filling out forms.
-      </p>
-
-      <h3>Performance and Analytics Cookies</h3>
-      <p>We use Google Analytics to collect information about how visitors interact with our website. These cookies help
-        us understand website traffic and improve our content. The data collected includes:</p>
-      <ul>
-        <li>Pages visited</li>
-        <li>Time spent on the site</li>
-        <li>Browser type</li>
-        <li>Referring URLs</li>
-      </ul>
-
-      <h2>Managing Cookies</h2>
-      <p>You can manage or disable cookies through your browser settings. Please note that disabling essential cookies
-        may impact the functionality of our website. Instructions for managing cookies in popular browsers can be found
-        here:</p>
-      <ul>
-        <li><a href="https://support.google.com/chrome/answer/95647" target="_blank">Google Chrome</a></li>
-        <li><a href="https://support.mozilla.org/en-US/kb/enable-and-disable-cookies-website-preferences"
-            target="_blank">Mozilla Firefox</a></li>
-        <li><a href="https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac"
-            target="_blank">Safari</a></li>
-        <li><a
-            href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
-            target="_blank">Microsoft Edge</a></li>
-      </ul>
-
-      <h2>Contact Us</h2>
-      <p>If you have any questions about this Cookie Policy, please contact us at:</p>
-      <address>
-        Infonominal d.o.o.<br>
-        <a href="mailto:privacy@infonominal.com">privacy@infonominal.com</a>
-      </address>
-    </div>
-  </div>
-
-  <!-- Credits Modal -->
-  <div id="credits" class="modal">
-    <div class="modal-content policy-content">
-      <button class="modal-close">&times;</button>
-      <h1>Credits</h1>
-      <p>
-        We want to thank these incredible authors and services for generously providing their artwork for free, making
-        this website possible.</p>
-      <ul>
-        <li>Hero photo by <a target="_blank"
-            href="https://unsplash.com/@paola_aguilar?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Paola
-            Aguilar</a> on <a
-            href="https://unsplash.com/photos/woman-leaning-against-door-while-holding-her-cheek-O-FR79xcGh8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-        </li>
-        <li>3D spheres background by <a
-            href="https://www.figma.com/community/file/1098661764956529383/realistic-spheres-3d-background-free"
-            target="_blank">Татьяна Крупина</a></li>
-        <li>Icons and illustrations by <a href="https://www.streamlinehq.com/" target="_blank">Streamline</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <script>
-    window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
-    window.LOCALE = 'en';
-    window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-
-    window.REQUIRED_ERROR_MESSAGE = "This field cannot be left blank. ";
-
-    window.GENERIC_INVALID_MESSAGE = "The information provided is invalid. Please review the field format and try again.";
-
-    window.translation = {
-      common: {
-        selectedList: '{quantity} list selected',
-        selectedLists: '{quantity} lists selected'
-      }
-    };
-
-    var AUTOHIDE = Boolean(0);
-  </script>
-
-  <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-
-  <script src="script.js"></script>
-</body>
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    <script src="script.js"></script>
+  </body>
 
 </html>
