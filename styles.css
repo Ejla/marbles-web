@@ -118,6 +118,11 @@ header .btn {
   font-size: smaller;
 }
 
+header:has(.nav-links.active) {
+  background-color: white;
+  transition: none;
+}
+
 .logo {
   font-weight: 700;
   font-size: 1.5rem;
@@ -171,9 +176,9 @@ nav a:hover {
 /* Hero section */
 .hero {
   padding-top: 6rem;
-  padding-bottom: 250px;
-  background-image: url('img/marbles-hero-lg.webp');
-  background-size: 1200px;
+  padding-bottom: 180px;
+  background-image: url('img/marbles-hero.webp');
+  background-size: 900px;
   background-repeat: no-repeat;
   background-position: center bottom -80px;
   background-color: var(--soft-purple);
@@ -181,7 +186,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
   max-width: 48rem;
@@ -190,9 +195,26 @@ nav a:hover {
   line-height: 1.2;
 }
 
+.hero-description {
+  max-width: 100%;
+  margin: 2rem auto;
+  color: var(--neutral-color);
+  font-size: 1rem;
+}
+
 @media (min-width: 768px) {
+  .hero {
+    background-size: 1200px;
+    padding-bottom: 250px;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    max-width: 36rem;
   }
 }
 
@@ -202,20 +224,14 @@ nav a:hover {
   }
 }
 
-.hero p.subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  color: var(--neutral-color);
+.tags {
+  margin: 1rem 0 2rem 0;
 }
 
 @media (min-width: 768px) {
-  .hero p.subtitle {
-    font-size: 1.5rem;
+  .tags {
+    margin: 2rem 0 3rem;
   }
-}
-
-.tags {
-  margin: 2rem 0 3rem;
 }
 
 .tags p {
@@ -244,12 +260,6 @@ nav a:hover {
   gap: 0.5rem;
 }
 
-.hero-description {
-  max-width: 36rem;
-  margin: 2rem auto;
-  color: var(--neutral-color);
-  font-size: 1.125rem;
-}
 
 
 
@@ -277,25 +287,46 @@ nav a:hover {
 
 /* Sections */
 section {
-  padding: 5rem 0;
+  padding: 2rem 1rem;
 }
 
 .section-heading {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
 .section-heading h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .section-heading p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--neutral-color);
-  max-width: 48rem;
+  max-width: 100%;
   margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 5rem 1rem;
+  }
+
+  .section-heading {
+    margin-bottom: 3rem;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+
+  .section-heading p {
+    font-size: 1.125rem;
+    max-width: 48rem;
+  }
 }
 
 /* Features section */
@@ -359,11 +390,21 @@ section {
 
 .why-choose {
   margin-top: 5rem;
+  margin-left: -2rem;
+  margin-right: -2rem;
   background: radial-gradient(circle at calc(50% + 100px) 50%,
       #faf8f8,
       #ede3e5 700px);
   padding: 2.5rem;
-  border-radius: var(--border-radius);
+  border-radius: 0;
+}
+
+@media (min-width: 768px) {
+  .why-choose {
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: var(--border-radius);
+  }
 }
 
 .why-choose h3 {
@@ -378,7 +419,13 @@ section {
   gap: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 500px) {
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 980px) {
   .benefits-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -447,7 +494,6 @@ section {
   border: 1px solid rgba(229, 222, 255, 0.3);
   border-radius: var(--border-radius);
   background-color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -529,7 +575,7 @@ section {
       #e26283,
       var(--dark-purple) 500px);
   box-shadow: 6.4em 9.1em 4.5em 0 rgba(0, 0, 0, .01), 3.6em 5.1em 3.8em 0 rgba(0, 0, 0, .03), 1.6em 2.3em 2.8em 0 rgba(0, 0, 0, .06), .4em .6em 1.5em 0 rgba(0, 0, 0, .06), 0 0 0 0 rgba(0, 0, 0, .06);
-  padding: 3rem 3rem 0 3rem;
+  padding: 3rem 2rem 0 2rem;
   border-radius: var(--border-radius);
 
   .early-access-intro {
@@ -544,6 +590,12 @@ section {
 
   }
 
+}
+
+@media (min-width: 768px) {
+  .early-access-box {
+    padding: 3rem 3rem 0 3rem;
+  }
 }
 
 
@@ -748,13 +800,13 @@ nav {
   top: 100%;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(8px);
   padding: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  border-top: 1px solid var(--soft-purple);
+  background-color: white;
 }
 
 .nav-links.active {
@@ -790,6 +842,7 @@ nav {
     width: auto;
     background-color: transparent;
     backdrop-filter: none;
+    border-top: none;
   }
 
   .mobile-menu-btn {
@@ -845,4 +898,82 @@ nav {
       color: var(--dark-purple);
     }
   }
+}
+
+.ml-subscription {
+  min-height: 100%;
+  background: radial-gradient(circle at calc(50% + 100px) 50%,
+      var(--soft-purple),
+      var(--light-purple) 500px);
+
+  a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--dark-purple);
+    }
+  }
+}
+
+.ml-subscription-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+
+  .link-to-website {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+}
+
+.ml-subscription-card {
+  text-align: center;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+  }
+
+  p {
+    margin-top: 0.25rem;
+  }
+
+  strong {
+    font-weight: 600;
+  }
+
+  .instructions {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: var(--neutral-color);
+  }
+
+  .success-icon {
+    width: 160px;
+    height: auto;
+    margin-top: -2rem;
+    margin-bottom: -1rem;
+  }
+
 }
