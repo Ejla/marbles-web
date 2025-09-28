@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article>
+  <section class="hero">
+    <div class="container">
+      <h1 class="animate-fade-in">{{ page.title }}</h1>
+      <p class="post-meta animate-fade-in animation-delay-400">{{ page.date | date: "%B %d, %Y" }}</p>
+    </div>
+  </section>
+  <section class="post-content">
+    <div class="container">
+      <div class="post-body">
+        {{ content }}
+      </div>
+    </div>
+  </section>
+</article>

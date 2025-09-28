@@ -26,6 +26,11 @@ body {
 
 a {
   text-decoration: none;
+  color: var(--dark-purple);
+  transition: color 0.2s ease;
+  &:hover {
+    color: var(--primary-color);
+  }
 
 }
 
@@ -177,12 +182,16 @@ nav a:hover {
 .hero {
   padding-top: 6rem;
   padding-bottom: 180px;
-  background-image: url('img/marbles-hero.webp');
+  background-image: url('../../img/marbles-hero.webp');
   background-size: 900px;
   background-repeat: no-repeat;
   background-position: center bottom -80px;
   background-color: var(--soft-purple);
   text-align: center;
+}
+article .hero, .blog .hero {
+  background-image: none;
+  padding-bottom: 2rem;
 }
 
 .hero h1 {
@@ -804,13 +813,16 @@ nav {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   border-top: 1px solid var(--soft-purple);
   background-color: white;
 }
 
 .nav-links.active {
   display: flex;
+}
+.nav-links a.active {
+  color: var(--dark-purple);
 }
 
 /* Update existing mobile-menu-btn styles */
@@ -976,4 +988,35 @@ nav {
     margin-bottom: -1rem;
   }
 
+}
+
+.blog-overview {
+  padding: 7rem 0 2rem;
+  background-color: white;
+  
+  .post-meta {
+    color: var(--neutral-color);
+    font-size: 0.875rem;
+  }
+  .post-preview + .post-preview {
+    margin-top: 3rem;
+  }
+  .post-content-preview {
+    display: flex;
+    margin-top: .5rem;
+  }
+  img + .post-content-preview {
+    margin-left: 1.5rem;
+  }
+  .btn  {
+    margin-top: 1rem;
+  }
+
+}
+.post-content .container, .blog-overview .container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.post-content {
+  padding-bottom: 2rem;
 }

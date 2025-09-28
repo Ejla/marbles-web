@@ -1,0 +1,39 @@
+title: "Marbles - Your All-in-One Mind Decluttering Companion"
+description: "All-in-one tool for journaling, tracking habits, managing simple lists and jotting down random thoughts."
+author: "Infonominal"
+url: "https://your-site-url.com"  # Replace with actual URL
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+# theme: minima  # Or remove if using custom
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Plugins
+# plugins:
+#   - jekyll-feed
+#   - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# Include
+include:
+  - _pages
+
+# Sass
+sass:
+  sass_dir: assets/stylesheets

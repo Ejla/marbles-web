@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/favicons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{ site.baseurl }}/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="{{ site.baseurl }}/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/favicons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Marbles" />
+    <link rel="manifest" href="{{ site.baseurl }}/site.webmanifest" />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/stylesheets/styles.css" />
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <style>
+      #sib-container input:-ms-input-placeholder {
+        text-align: left;
+        font-family: 'Figtree', sans-serif;
+      }
+
+      #sib-container input {
+        padding: 1rem 1.5rem;
+        border: none;
+        border-radius: 99px;
+        width: 100%;
+        font-size: 1rem;
+        height: auto;
+        background-color: #fff;
+        line-height: 1.5rem;
+
+        &:focus,
+        &:focus-visible {
+          outline: none;
+          box-shadow: 0 0 0 2px rgba(0, 0, 0, .5);
+        }
+      }
+
+      #sib-container form {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .sib-form .entry__field:focus-within {
+        box-shadow: none;
+      }
+
+      .sib-form-block__button {
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 99px;
+        border: 1px solid white;
+        color: white;
+        background-color: #cb3a60;
+
+        font-weight: 500;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        white-space: nowrap;
+        text-decoration: none;
+        line-height: 1.5rem;
+
+        &:hover {
+          background-color: #9b2342;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #sib-container form {
+          flex-direction: column;
+        }
+
+        .xx-button {
+          flex: 1;
+        }
+
+        .sib-form-block__button {
+          width: 100%
+        }
+      }
+
+      .sib-form .entry__field {
+        -webkit-align-items: center;
+        align-items: center;
+        background: transparent;
+        border: none;
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .sib-form-block {
+        padding: 0;
+      }
+
+      .xx-input {
+        flex: 1;
+      }
+
+      #error-message.sib-form-message-panel.sib-form-message-panel--active {
+        font-size: 1rem;
+        text-align: left;
+        font-family: 'Figtree', sans-serif !important;
+        color: #993344 !important;
+        background-color: #ffeded;
+        border-radius: 1rem !important;
+        border-color: transparent !important;
+        max-width: 800px !important;
+      }
+
+      .entry__error.entry__error--primary {
+        background-color: transparent;
+        font-size: .9rem;
+        color: #f3e9eb;
+        font-family: 'Figtree', sans-serif;
+      }
+
+      #sib-container input::placeholder {
+        text-align: left;
+        font-family: 'Figtree', sans-serif;
+        color: var(--neutral-150);
+      }
+
+      #sib-container textarea::placeholder {
+        text-align: left;
+        font-family: 'Figtree', sans-serif;
+        color: var(--neutral-150);
+      }
+
+      #sib-container a {
+        text-decoration: underline;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    {% include header.html %}
+
+    {{ content }}
+
+    {% include get-early-access.html %}
+
+    {% include footer.html %}
+
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+
+    <script>
+      // Header scroll effect
+      window.addEventListener('scroll', function () {
+        const header = document.getElementById('header');
+        if (window.scrollY > 10) {
+          header.classList.add('header-scrolled');
+        } else {
+          header.classList.remove('header-scrolled');
+        }
+      });
+
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    <script src="{{ site.baseurl }}/script.js"></script>
+  </body>
+
+</html>
