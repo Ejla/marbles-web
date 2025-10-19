@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marbles - Your All-in-One Mind Decluttering Companion</title>
+    <title>Why Client-Side Encryption Matters</title>
     <meta name="description" content="All-in-one tool for journaling, tracking habits, managing simple lists and jotting down random thoughts." />
     <meta name="author" content="Infonominal" />
     <meta property="og:type" content="website">
@@ -150,8 +150,8 @@
       <img src="/img/marbles-logo.svg" alt="Marbles Logo" class="logo-image" />
     </div>
     <nav class="nav-links">
-      <a href="/" class="active">Home</a>
-      <a href="/blog" >Blog</a>
+      <a href="/" >Home</a>
+      <a href="/blog" class="active">Blog</a>
       <a href="#early-access" class="btn btn-secondary">Get Early Access</a>
     </nav>
     <button class="mobile-menu-btn">
@@ -165,224 +165,57 @@
   </div>
 </header>
 
-    <main class="home">
-      <section class="hero">
-        <div class="container">
-          <h1 class="animate-fade-in">Marbles: Your All-in-One Mind Decluttering Companion</h1>
-          <p class="hero-description animate-fade-in animation-delay-400">
-            A lightweight, friendly app to quickly capture what's on
-            your mind so you can free up space in your head.
-          </p>
+    <article>
+  <section class="hero">
+    <div class="container">
+      <h1 class="animate-fade-in">Why Client-Side Encryption Matters</h1>
+      <p class="post-meta animate-fade-in animation-delay-400">October 15, 2025</p>
+    </div>
+  </section>
+  <section class="post-content">
+    <div class="container">
+      <a href="/blog" class="btn btn-secondary mb-4">&larr; Back to articles</a>
+      <div class="post-body">
+        <p>One thing that everyone nowadays needs to be aware of - the internet is not a safe place.</p>
 
-          <div class="tags animate-fade-in animation-delay-200">
+<p>We like to think our data is safe because we use “secure” apps, but in truth, anything stored online can be at risk. Big companies get hacked, smaller services cut corners, and human error can happen anywhere. Even if your data is encrypted on a company’s servers, it often means <em>they</em> hold the keys - not you.</p>
 
-            <div class="tag-container">
-              <span class="tag"><img src="img/journal.svg" /><span>Journal</span></span>
-              <span class="tag"><img src="img/habit.svg" /><span>Habit tracker</span></span>
-              <span class="tag"><img src="img/list.svg" /><span>Lists</span></span>
-              <span class="tag"><img src="img/note.svg" /><span>Notes</span></span>
-            </div>
-          </div>
+<p>That’s why I’ve become a bit more cautious (some might say paranoid) about where my personal notes and thoughts go. It’s not that I have state secrets to hide - it’s just that our private moments, reflections, and personal struggles deserve respect. I think we all want a space where we can be honest without wondering if some algorithm or database breach might one day expose it.</p>
 
+<p>The reality is, most online tools prioritize convenience and connectivity over true privacy. They sync your data, back it up, analyze it “for your benefit” - but in doing so, they also hold control over it. And as users, we’ve learned to trade that control for usability because, well, what’s the alternative?</p>
 
-          <a href="#early-access" class="btn btn-primary animate-fade-in animation-delay-300">GET EARLY ACCESS</a>
+<p>That’s exactly the gap I wanted to fill with Marbles - a space that’s still convenient, still cloud-based, but where <strong>you</strong> stay in control of your data.</p>
 
+<h2 id="how-client-side-encryption-works">How client-side encryption works</h2>
 
+<p>This is going to get a bit technical, but I’ll try to explain how client-side encryption works - and why Marbles is safer than most online tools today.</p>
 
+<p>In most online apps, when you type something, it gets sent to the server as readable text. The server might then encrypt it - but since the server itself did the encryption, it also holds the key to decrypt it. This is what’s called <strong>server-side encryption</strong>. It’s good for protecting data from outsiders, but not from the service provider itself. In theory, anyone with access to the system - a developer, an admin, or a hacker who gains access - could still read your notes.</p>
 
-        </div>
+<p><strong>Client-side encryption</strong>, which Marbles uses, flips that around. Your device does the encryption <em>before</em> the data ever leaves your computer or phone. The encryption key - basically your secret password or PIN - never leaves your device. The text that travels over the internet and gets stored in the database is already encrypted, meaning it’s just random, unreadable characters.</p>
 
-      </section>
-      <section class="hero-image-section">
-        <div class="section-heading">
-          <h2>Offload your thoughts, clear your mind</h2>
-          <p>Easy to use, no complex workflows. Just open the app and get started.</p>
-        </div>
+<p>Even if someone were to access the database or intercept your traffic, what they’d get would look like nonsense. And since only your personal encryption PIN can unlock it - something Marbles never stores or even sees - no one, not even I as the creator, can decrypt your data.</p>
 
-        <div class="hero-image animate-fade-in animation-delay-500">
-          <div class="hero-image-placeholder">
-            <img src="img/marbles-screen.webp" alt="Marbles App Screenshot" class="hero-image-screenshot" />
-          </div>
-        </div>
-      </section>
+<p>To put it simply:</p>
+<ul>
+  <li>With most tools, you trust the company not to look.</li>
+  <li>With Marbles, it’s <strong>mathematically impossible</strong> for the company to look.</li>
+</ul>
 
-      <section id="features">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Life can be overwhelming, and your mind deserves a break.</h2>
-            <p>Marbles helps you offload your thoughts, stay organized, and build better habits—all in one secure,
-              user-friendly app.</p>
-          </div>
+<p>This kind of encryption is the same principle used by secure messaging apps and password managers. It’s more complex to build and maintain, but it’s the only way I personally feel comfortable storing private thoughts online.</p>
 
-          <div class="features-grid">
-            <div class="feature-card">
-              <div class="feature-header">
-                <img src="img/girl.webp" alt="Journaling" />
-                <h3>Journal Your Thoughts</h3>
-              </div>
+<h2 id="why-privacy-matters-for-creativity-and-self-reflection">Why privacy matters for creativity and self-reflection</h2>
 
-              <p class="mb-4">Whether it's a fleeting thought, a daily reflection, or a moment of gratitude, capture it
-                all effortlessly in the online journal.</p>
-              <p>Your entries are stored securely, giving you peace of mind as you express yourself freely.</p>
-            </div>
+<p>When we feel truly safe - when we know our thoughts, ideas, and emotions won’t be seen or judged - we can be more honest with ourselves. That’s where growth begins. Whether you’re journaling through a rough patch, brainstorming a dream project, or just trying to organize your day, feeling secure in your digital space matters.</p>
 
-            <div class="feature-card">
-              <div class="feature-header">
-                <img src="img/ideas.webp" alt="Organizer" />
-                <h3>Sort Out the Clutter</h3>
-              </div>
+<p>That’s what Marbles is about. It’s not about locking yourself away from the world - it’s about creating a quiet, trusted corner of it. A place where you can think freely, without worrying who’s watching. Because privacy isn’t just a technical feature - it’s the foundation of self-expression.</p>
 
-              <p class="mb-4">Keep track of your tasks, and ideas with simple lists and notes.
-              </p>
-              <p>Marbles combines practical tools with thoughtful reflection so your mind stays clear, not cluttered.
-              </p>
-            </div>
+<p>Client-side encryption keeps your data private and secure, but it comes with some trade-offs: encrypted notes aren’t searchable, and if you forget your PIN, they can become permanently inaccessible. Learn how you can address these challenges <a href="/blog/2025/10/19/challenges-of-client-side-encryption/">in the next article →</a></p>
 
-            <div class="feature-card">
-              <div class="feature-header">
-                <img src="img/habit.webp" alt="Habit tracking" />
-                <h3>Build Habits That Stick</h3>
-              </div>
-              <p class="mb-4">Turn small actions into lasting change with easy-to-use habit tracking.</p>
-              <p>Check off your daily wins, stay motivated, and see your progress grow over time.</p>
-            </div>
-
-            <div class="feature-card">
-              <div class="feature-header">
-                <img src="img/privacy.webp" alt="Privacy" />
-                <h3>Your Privacy, Our Priority</h3>
-              </div>
-              <p class="mb-4">We take your data seriously. Marbles uses strong encryption to keep your thoughts and
-                information safe.</p>
-              <p>With our advanced security features, only you can access your data - no one else, not
-                even us.</p>
-            </div>
-          </div>
-
-          <div class="why-choose">
-            <h3>Why Choose Marbles?</h3>
-            <div class="benefits-grid">
-              <div class="benefit-card">
-                <div class="benefit-card-header">
-                  <img src="img/puzzle.svg" alt="Puzzle Icon" class="benefit-icon" />
-                  <h4>All-in-One Convenience</h4>
-                </div>
-                <p>Journal, habits, lists and notes — no need for separate apps</p>
-              </div>
-
-              <div class="benefit-card">
-                <div class="benefit-card-header">
-                  <img src="img/flowers.svg" alt="Lotus Icon" class="benefit-icon" />
-                  <h4>Intuitive Design</h4>
-                </div>
-                <p>Easy to use, no learning curve. Just open the app and get started.</p>
-              </div>
-
-              <div class="benefit-card">
-                <div class="benefit-card-header">
-                  <img src="img/keyhole.svg" alt="Puzzle Icon" class="benefit-icon" />
-                  <h4>Real Privacy</h4>
-                </div>
-
-                <p>Built with modern encryption and user-first data practices</p>
-              </div>
-
-              <div class="benefit-card">
-                <div class="benefit-card-header">
-                  <img src="img/lotus.svg" alt="Lotus Icon" class="benefit-icon" />
-                  <h4>Designed for Peace of Mind</h4>
-                </div>
-                <p>Simple, clean, and calming to use</p>
-              </div>
-
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- <section id="plans">
-        <div class="container">
-          <div class="section-heading">
-            <h2>Choose Your Plan</h2>
-          </div>
-
-          <div class="plans-grid">
-            <div class="plan-card">
-              <div class="plan-header">
-                <div>
-                  <div class="plan-type">Free Plan</div>
-                </div>
-                <div class="plan-price">$0</div>
-              </div>
-
-              <ul class="plan-features">
-                <li class="plan-feature">
-                  <span class="check-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </span>
-                  <span>Limit of 20 entries per feature</span>
-                </li>
-                <li class="plan-feature">
-                  <span class="check-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </span>
-                  <span>Standard security (database encryption)</span>
-                </li>
-              </ul>
-
-              <a href="#early-access" class="btn btn-secondary"
-                style="display: block; width: 100%; margin-top: auto;">Get Started</a>
-            </div>
-
-            <div class="plan-card">
-              <div class="plan-header">
-                <div>
-                  <div class="plan-type">Premium Plan</div>
-                  <div class="plan-popular">Most Popular</div>
-                </div>
-                <div class="plan-price">$9/month</div>
-              </div>
-
-              <ul class="plan-features">
-                <li class="plan-feature">
-                  <span class="check-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </span>
-                  <span>Unlimited entries</span>
-                </li>
-                <li class="plan-feature">
-                  <span class="check-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                  </span>
-                  <span>Advanced security</span>
-                </li>
-              </ul>
-
-              <a href="#early-access" class="btn btn-primary" style="display: block; width: 100%;">Get Premium</a>
-            </div>
-          </div>
-
-          <p class="plan-note">Start free. Upgrade when you're ready.</p>
-          <p class="plans-tagline">Marbles helps you get things out of your head—and keep them safe.</p>
-        </div>
-      </section> -->
-
-      
-    </main>
-
+      </div>
+    </div>
+  </section>
+</article>
 
     <section id="early-access" style="margin-top: -3rem;">
   <div class="container early-access-container">
