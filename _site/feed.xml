@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://yourmarbles.app//feed.xml" rel="self" type="application/atom+xml" /><link href="https://yourmarbles.app//" rel="alternate" type="text/html" /><updated>2025-10-19T12:39:04+02:00</updated><id>https://yourmarbles.app//feed.xml</id><title type="html">Marbles - Your All-in-One Mind Decluttering Companion</title><subtitle>All-in-one tool for journaling, tracking habits, managing simple lists and jotting down random thoughts.</subtitle><author><name>Infonominal</name></author><entry><title type="html">The Honest Side of Privacy: Challenges of Client-Side Encryption</title><link href="https://yourmarbles.app//blog/2025/10/19/challenges-of-client-side-encryption/" rel="alternate" type="text/html" title="The Honest Side of Privacy: Challenges of Client-Side Encryption" /><published>2025-10-19T00:00:00+02:00</published><updated>2025-10-19T00:00:00+02:00</updated><id>https://yourmarbles.app//blog/2025/10/19/challenges-of-client-side-encryption</id><content type="html" xml:base="https://yourmarbles.app//blog/2025/10/19/challenges-of-client-side-encryption/"><![CDATA[<p>In the <a href="/blog/2025/10/15/why-client-side-encryption-matters/">← previous post</a>, I talked about how client-side encryption works and why it makes Marbles a safer space for your private thoughts. But as with most things, there’s another side to the story - the part that’s a bit less glamorous but equally important to understand.</p>
+
+<p>Client-side encryption gives you full control over your data, but that control also comes with responsibility. So in this article, I want to talk about the <strong>downsides</strong> - the real-world challenges that come with protecting your privacy - and the simple ways you can manage them.</p>
+
+<h2 id="the-danger-of-forgetting-your-encryption-pin">The Danger of Forgetting Your Encryption PIN</h2>
+
+<p>This is the big one.<br />
+When you encrypt a notebook in Marbles, your data is locked with a key (<strong>your encryption PIN</strong>) that only you know. That key is never stored anywhere - not on our servers, not in your browser, not in a secret backup file. It lives only in your memory (or wherever you choose to store it).</p>
+
+<p>That’s what makes it so secure - but it also means that if you forget it, there is <strong>no way</strong> to recover the data. There’s no “Forgot password?” button. The encrypted notes are essentially random characters without your key.</p>
+
+<p>I know that sounds scary, but the solution is pretty simple:</p>
+
+<ul>
+  <li>Store your PIN safely in a <strong>password manager</strong> (like Bitwarden, 1Password, or even your phone’s secure notes).</li>
+  <li>Write it down on paper and keep it somewhere private if you prefer old-school backups.</li>
+  <li>Choose a PIN that’s <strong>personally meaningful but known only to you</strong> - something tied to a memory or pattern you’ll easily recall, but that others couldn’t guess.</li>
+  <li>Don’t reuse a password you use elsewhere - this PIN protects your private thoughts, not your email.</li>
+</ul>
+
+<p>It’s all about balance: keep it safe, but keep it accessible to <em>you</em>.</p>
+
+<h2 id="backups---the-just-in-case-safety-net">Backups - The “Just in Case” Safety Net</h2>
+
+<p>Marbles lets you <strong>export your notebooks and journals</strong> in different formats depending on your needs:</p>
+
+<ul>
+  <li><strong>JSON:</strong> This is how Marbles stores your data internally. It’s encrypted and formatted for the app, so it’s great if you want to back up or move your notebooks to another Marbles account. I strongly recommend doing a <strong>manual backup</strong> every now and then. That way, if something unexpected happens (you accidentally delete something, your device crashes, or you just want peace of mind), you can easily restore everything from your exported file by <strong>importing it back into Marbles</strong>.</li>
+  <li><strong>PDF or Markdown (MD):</strong> These formats export the <strong>decrypted, human-readable version</strong> of your notes. PDFs are perfect for sharing or printing, while Markdown keeps your text flexible for editing in any Markdown editor.</li>
+</ul>
+
+<p>This flexibility means your thoughts are never locked away in a proprietary system. Even if you decide to stop using Marbles, you can still carry your content with you, readable and usable anywhere.</p>
+
+<h2 id="the-search-limitation">The Search Limitation</h2>
+
+<p>Here’s another tricky part.<br />
+Since encrypted data is stored as unreadable text, the system can’t “look inside” to search for keywords. That means full-text search within encrypted notebooks isn’t possible - at least not without decrypting everything first, which would defeat the whole purpose of client-side encryption.</p>
+
+<p>There are some experimental ways to make “searchable encryption,” but they either compromise privacy or make everything painfully slow. For now, I prefer not to pretend that this problem is solved. It’s a compromise - one that keeps your data truly private.</p>
+
+<p>That said, Marbles does offer <strong>tagging</strong> as a way to organize and find things later. You can add tags like <code class="language-plaintext highlighter-rouge">#garden</code>, <code class="language-plaintext highlighter-rouge">#journal</code>, or <code class="language-plaintext highlighter-rouge">#project-ideas</code>, and quickly filter notes by topic. It’s not quite the same as full search, but it’s a lightweight and private way to keep your notes structured and easy to browse.</p>
+
+<h2 id="privacy-is-never-free---but-its-worth-it">Privacy Is Never Free - But It’s Worth It</h2>
+
+<p>True privacy in digital tools always comes with a price. Sometimes it’s convenience, sometimes it’s the comfort of knowing there’s a “reset” button.</p>
+
+<p>But I believe the trade-off is worth it.<br />
+Client-side encryption means no one - not me, not a system admin, not an algorithm - can peek into your private thoughts. And with a few good habits like storing your PIN safely, backing up regularly, and tagging your notes, you can have both <strong>privacy and peace of mind</strong>.</p>
+
+<p>Because in the end, Marbles isn’t about being perfect or feature-packed. It’s about creating a space you can trust - even when the rest of the internet feels a bit too crowded and noisy.</p>]]></content><author><name>Infonominal</name></author><summary type="html"><![CDATA[Client-side encryption keeps your data private, but it comes with trade-offs - from remembering your encryption key to limited search functionality. Here’s what you need to know, and how Marbles helps you navigate these challenges safely.]]></summary></entry><entry><title type="html">Why Client-Side Encryption Matters</title><link href="https://yourmarbles.app//blog/2025/10/15/why-client-side-encryption-matters/" rel="alternate" type="text/html" title="Why Client-Side Encryption Matters" /><published>2025-10-15T00:00:00+02:00</published><updated>2025-10-15T00:00:00+02:00</updated><id>https://yourmarbles.app//blog/2025/10/15/why-client-side-encryption-matters</id><content type="html" xml:base="https://yourmarbles.app//blog/2025/10/15/why-client-side-encryption-matters/"><![CDATA[<p>One thing that everyone nowadays needs to be aware of - the internet is not a safe place.</p>
+
+<p>We like to think our data is safe because we use “secure” apps, but in truth, anything stored online can be at risk. Big companies get hacked, smaller services cut corners, and human error can happen anywhere. Even if your data is encrypted on a company’s servers, it often means <em>they</em> hold the keys - not you.</p>
+
+<p>That’s why I’ve become a bit more cautious (some might say paranoid) about where my personal notes and thoughts go. It’s not that I have state secrets to hide - it’s just that our private moments, reflections, and personal struggles deserve respect. I think we all want a space where we can be honest without wondering if some algorithm or database breach might one day expose it.</p>
+
+<p>The reality is, most online tools prioritize convenience and connectivity over true privacy. They sync your data, back it up, analyze it “for your benefit” - but in doing so, they also hold control over it. And as users, we’ve learned to trade that control for usability because, well, what’s the alternative?</p>
+
+<p>That’s exactly the gap I wanted to fill with Marbles - a space that’s still convenient, still cloud-based, but where <strong>you</strong> stay in control of your data.</p>
+
+<h2 id="how-client-side-encryption-works">How client-side encryption works</h2>
+
+<p>This is going to get a bit technical, but I’ll try to explain how client-side encryption works - and why Marbles is safer than most online tools today.</p>
+
+<p>In most online apps, when you type something, it gets sent to the server as readable text. The server might then encrypt it - but since the server itself did the encryption, it also holds the key to decrypt it. This is what’s called <strong>server-side encryption</strong>. It’s good for protecting data from outsiders, but not from the service provider itself. In theory, anyone with access to the system - a developer, an admin, or a hacker who gains access - could still read your notes.</p>
+
+<p><strong>Client-side encryption</strong>, which Marbles uses, flips that around. Your device does the encryption <em>before</em> the data ever leaves your computer or phone. The encryption key - basically your secret password or PIN - never leaves your device. The text that travels over the internet and gets stored in the database is already encrypted, meaning it’s just random, unreadable characters.</p>
+
+<p>Even if someone were to access the database or intercept your traffic, what they’d get would look like nonsense. And since only your personal encryption PIN can unlock it - something Marbles never stores or even sees - no one, not even I as the creator, can decrypt your data.</p>
+
+<p>To put it simply:</p>
+<ul>
+  <li>With most tools, you trust the company not to look.</li>
+  <li>With Marbles, it’s <strong>mathematically impossible</strong> for the company to look.</li>
+</ul>
+
+<p>This kind of encryption is the same principle used by secure messaging apps and password managers. It’s more complex to build and maintain, but it’s the only way I personally feel comfortable storing private thoughts online.</p>
+
+<h2 id="why-privacy-matters-for-creativity-and-self-reflection">Why privacy matters for creativity and self-reflection</h2>
+
+<p>When we feel truly safe - when we know our thoughts, ideas, and emotions won’t be seen or judged - we can be more honest with ourselves. That’s where growth begins. Whether you’re journaling through a rough patch, brainstorming a dream project, or just trying to organize your day, feeling secure in your digital space matters.</p>
+
+<p>That’s what Marbles is about. It’s not about locking yourself away from the world - it’s about creating a quiet, trusted corner of it. A place where you can think freely, without worrying who’s watching. Because privacy isn’t just a technical feature - it’s the foundation of self-expression.</p>
+
+<p>Client-side encryption keeps your data private and secure, but it comes with some trade-offs: encrypted notes aren’t searchable, and if you forget your PIN, they can become permanently inaccessible. Learn how you can address these challenges <a href="/blog/2025/10/19/challenges-of-client-side-encryption/">in the next article →</a></p>]]></content><author><name>Infonominal</name></author><summary type="html"><![CDATA[In a world where most online tools hold the keys to your personal data, Marbles gives you full control. Learn how client-side encryption works and why your thoughts can finally stay truly private.]]></summary></entry><entry><title type="html">How Marbles Came to Be</title><link href="https://yourmarbles.app//blog/2025/10/12/welcome-to-marbles/" rel="alternate" type="text/html" title="How Marbles Came to Be" /><published>2025-10-12T00:00:00+02:00</published><updated>2025-10-12T00:00:00+02:00</updated><id>https://yourmarbles.app//blog/2025/10/12/welcome-to-marbles</id><content type="html" xml:base="https://yourmarbles.app//blog/2025/10/12/welcome-to-marbles/"><![CDATA[<h1 id="hello-there">Hello there!</h1>
+
+<p>I just wanted to stop by and say hi - I’m the creator of <strong>Marbles</strong>.</p>
+
+<p>First of all, a warm welcome! I’d love to tell you a little bit about how Marbles came to be and where it’s headed.</p>
+
+<p>The idea for an app like this appeared when I started my small vegetable garden. I needed a place to plan and journal the progress of my plants - something lightweight, a mix between a flexible checklist and a journal. I also wanted to keep a knowledge base for gardening tips and best practices, a sort of digital notebook. But I couldn’t find anything that met all those needs while staying simple.</p>
+
+<p>I ended up juggling several apps at once and quickly lost track of everything because the whole process became too complicated for my scattered brain.</p>
+
+<p>A year or so later, I wasn’t in the best place emotionally or mentally. I felt lost and uncertain about what I wanted to do next. Once again, I felt the need to pour my thoughts out into a journal - to clear the mess in my head. But this time, it was deeply personal, and I didn’t want to rely on an online tool where my most intimate thoughts might be exposed if something went wrong.</p>
+
+<p>I wished for a <strong>private, comfortable space</strong> where I could just be myself - no pressure, no expectations. A place where I could plan my day or my next vacation, reflect on my thoughts, jot down things I want to remember that aren’t work-related - a home for my hobbies, dreams, and aspirations.</p>
+
+<p>Having experience in creating digital products, I thought: <em>why not create that space myself?</em> And maybe, just maybe, it could help others who feel the same way.<br />
+And so, <strong>Marbles</strong> began to take shape.</p>
+
+<p>It’s designed as a set of simple tools - nothing fancy - that you can start using right away, without complex setups or rigid workflows. There are no expectations. If journaling is your thing, great. But if you ever feel like making a checklist, or tracking progress toward a goal, you can do that too. The key is: <strong>you choose how to use it</strong>.</p>
+
+<p>One of the most important aspects for me is <strong>privacy</strong>. Some of my thoughts are fine to keep online, but others I want to keep truly private. That’s what sets Marbles apart from most simple tools out there - you can enable <strong>client-side encryption</strong> for any notebook or journal. This means your content is encrypted <em>as you write it</em>, and it stays that way as it travels across the internet and gets saved in the database. Without your encryption PIN, there’s simply no way for anyone else to read it.</p>
+
+<p>For me, that’s the only way I feel comfortable storing sensitive personal information online.</p>
+
+<p>Of course, not everything needs to be private. My shopping list or quick to-do items don’t require encryption - I just want to access them fast when I’m at the store. That’s the beauty of Marbles: you can decide what matters more to you in each context - privacy or convenience.</p>
+
+<p>And one more thing I’ve noticed - many apps sacrifice <strong>readability</strong> in favor of pretty visuals. But what’s the point of a shopping list if I can’t read it on my phone? That’s why Marbles lets you easily adjust font sizes. Plus, there’s a cozy <strong>dark mode</strong> for those late-night journaling sessions, and a bright <strong>light mode</strong> for your morning coffee planning rituals.</p>
+
+<p>In the end, I want Marbles to be an unpretentious, everyday safe space - for reflecting, planning, journaling, and whatever else helps you grow into a better version of yourself, while making a positive impact on the world around you.</p>
+
+<p>If you want to learn more about client-side encryption, read the <a href="/blog/2025/10/15/why-client-side-encryption-matters/">next article →</a></p>]]></content><author><name>Infonominal</name></author><summary type="html"><![CDATA[When I couldn’t find a simple, private space to plan, journal, and reflect, I decided to create one myself. That’s how Marbles was born - a quiet digital corner for your thoughts, lists, and ideas, designed to be as private and personal as you want it to be.]]></summary></entry></feed>
