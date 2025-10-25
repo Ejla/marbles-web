@@ -107,4 +107,72 @@ const initMobileMenu = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
+  initCookieConsent();
 });
+
+// Cookie Consent functionality
+function initCookieConsent() {
+  const banner = document.getElementById('cookie-consent-banner');
+  const acceptBtn = document.getElementById('accept-cookies');
+  const declineBtn = document.getElementById('decline-cookies');
+
+  // Check if user has already made a choice
+  const consentChoice = localStorage.getItem('cookie-consent');
+  if (consentChoice) {
+    return; // Don't show banner if choice already made
+  }
+
+  // Show banner after a short delay
+  setTimeout(() => {
+    if (banner) {
+      banner.classList.add('show');
+    }
+  }, 1000);
+
+  // Handle accept button
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'accepted');
+      hideBanner();
+      // Initialize Google Analytics after consent
+      loadGoogleAnalytics();
+      console.log('Cookies accepted');
+    });
+  }
+
+  // Handle decline button
+  if (declineBtn) {
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'declined');
+      hideBanner();
+      // Here you can disable non-essential cookies
+      console.log('Cookies declined');
+    });
+  }
+
+  function hideBanner() {
+    if (banner) {
+      banner.classList.remove('show');
+      setTimeout(() => {
+        banner.style.display = 'none';
+      }, 300);
+    }
+  }
+
+  // Function to load Google Analytics
+  function loadGoogleAnalytics() {
+    if (typeof gtag === 'undefined') {
+      // Google Analytics 4
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://www.googletagmanager.com/gtag/js?id=G-8EM2NS1FQ0';
+      document.head.appendChild(script);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-8EM2NS1FQ0');
+    }
+  }
+}

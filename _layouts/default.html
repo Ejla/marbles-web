@@ -152,6 +152,8 @@
 
     {% include footer.html %}
 
+    {% include cookie-consent.html %}
+
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 
@@ -169,6 +171,25 @@
     </script>
     <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
     <script src="{{ site.baseurl }}/script.js"></script>
+
+    <!-- Google Analytics - conditionally loaded based on cookie consent -->
+    <script>
+      // Check for cookie consent before loading GA
+      if (localStorage.getItem('cookie-consent') === 'accepted') {
+        // Google Analytics 4
+        (function() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GA_MEASUREMENT_ID');
+        })();
+      }
+    </script>
   </body>
 
 </html>

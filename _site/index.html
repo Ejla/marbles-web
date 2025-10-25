@@ -210,7 +210,7 @@
         <div class="container">
           <div class="section-heading">
             <h2>Life can be overwhelming, and your mind deserves a break.</h2>
-            <p>Marbles helps you offload your thoughts, stay organized, and build better habits—all in one secure,
+            <p>Marbles helps you offload your thoughts, stay organized, and build better habits - all in one secure,
               user-friendly app.</p>
           </div>
 
@@ -267,7 +267,7 @@
                   <img src="img/puzzle.svg" alt="Puzzle Icon" class="benefit-icon" />
                   <h4>All-in-One Convenience</h4>
                 </div>
-                <p>Journal, habits, lists and notes — no need for separate apps</p>
+                <p>Journal, habits, lists and notes  -  no need for separate apps</p>
               </div>
 
               <div class="benefit-card">
@@ -376,7 +376,7 @@
           </div>
 
           <p class="plan-note">Start free. Upgrade when you're ready.</p>
-          <p class="plans-tagline">Marbles helps you get things out of your head—and keep them safe.</p>
+          <p class="plans-tagline">Marbles helps you get things out of your head - and keep them safe.</p>
         </div>
       </section> -->
 
@@ -499,6 +499,17 @@
   </div>
 </div>
 
+    <div id="cookie-consent-banner" class="cookie-consent-banner">
+  <div class="cookie-consent-content">
+    <p>This website uses cookies to enhance your experience. By continuing to use this site, you agree to our use of cookies.</p>
+    <div class="cookie-consent-buttons">
+      <button id="accept-cookies" class="btn btn-primary">Accept All</button>
+      <button id="decline-cookies" class="btn btn-secondary">Decline</button>
+      <a href="/privacy-policy" class="cookie-link">Learn More</a>
+    </div>
+  </div>
+</div>
+
     <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
 
@@ -516,6 +527,25 @@
     </script>
     <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
     <script src="/script.js"></script>
+
+    <!-- Google Analytics - conditionally loaded based on cookie consent -->
+    <script>
+      // Check for cookie consent before loading GA
+      if (localStorage.getItem('cookie-consent') === 'accepted') {
+        // Google Analytics 4
+        (function() {
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
+          document.head.appendChild(script);
+
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'GA_MEASUREMENT_ID');
+        })();
+      }
+    </script>
   </body>
 
 </html>

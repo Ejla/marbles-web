@@ -8,7 +8,7 @@ For those who love organizing life with lists - be it what to buy, remember, do,
 
 What if you could have a lightweight tool designed from the ground up to give you maximum control over your checklists without unnecessary complexity?
 
-<img src="/img/blog/marbles-list.webp" alt="Marbles lists" style="max-width: 750px; border-radius: 30px; margin: 10px auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,.08); border: 1px solid #eee;">
+<img src="/img/blog/marbles-list.webp" alt="Marbles lists" style="width: 100%; max-width: 750px; border-radius: 30px; margin: 10px auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,.08); border: 1px solid #eee;">
 
 ## What you can do with Marbles Lists
 
