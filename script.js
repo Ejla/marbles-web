@@ -116,9 +116,24 @@ function initCookieConsent() {
   const acceptBtn = document.getElementById('accept-cookies');
   const declineBtn = document.getElementById('decline-cookies');
 
+  // Set default consent state to denied before loading GA
+  if (typeof gtag !== 'undefined') {
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      analytics_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+  }
+
+  // Load Google Analytics after setting defaults
+  loadGoogleAnalytics();
+
   // Check if user has already made a choice
   const consentChoice = localStorage.getItem('cookie-consent');
   if (consentChoice) {
+    // Update consent based on previous choice
+    updateConsent(consentChoice === 'accepted' ? 'granted' : 'denied');
     return; // Don't show banner if choice already made
   }
 
@@ -134,8 +149,7 @@ function initCookieConsent() {
     acceptBtn.addEventListener('click', () => {
       localStorage.setItem('cookie-consent', 'accepted');
       hideBanner();
-      // Initialize Google Analytics after consent
-      loadGoogleAnalytics();
+      updateConsent('granted');
       console.log('Cookies accepted');
     });
   }
@@ -145,7 +159,7 @@ function initCookieConsent() {
     declineBtn.addEventListener('click', () => {
       localStorage.setItem('cookie-consent', 'declined');
       hideBanner();
-      // Here you can disable non-essential cookies
+      updateConsent('denied');
       console.log('Cookies declined');
     });
   }
@@ -156,6 +170,17 @@ function initCookieConsent() {
       setTimeout(() => {
         banner.style.display = 'none';
       }, 300);
+    }
+  }
+
+  function updateConsent(status) {
+    if (typeof gtag !== 'undefined') {
+      gtag('consent', 'update', {
+        ad_storage: status,
+        analytics_storage: status,
+        ad_user_data: status,
+        ad_personalization: status
+      });
     }
   }
 
