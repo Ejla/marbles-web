@@ -6,7 +6,7 @@ excerpt: "When I couldn’t find a simple, private space to plan, journal, and r
 
 # Hello there!
 
-I just wanted to stop by and say hi - I’m the creator of **Marbles**.  
+I just wanted to stop by and say hi - I’m, Mirna, the creator of **Marbles**.  
 
 First of all, a warm welcome! I’d love to tell you a little bit about how Marbles came to be and where it’s headed.  
 

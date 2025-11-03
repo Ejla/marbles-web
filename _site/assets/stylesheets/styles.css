@@ -116,7 +116,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .35rem 2rem;
+  padding: 1rem 2rem;
 }
 
 header .btn {
@@ -331,7 +331,7 @@ section {
 
 @media (min-width: 768px) {
   section {
-    padding: 5rem 1rem;
+    padding: 3rem 0 5rem;
   }
 
   .section-heading {
@@ -410,37 +410,26 @@ section {
 }
 
 .why-choose {
-  margin-top: 5rem;
-  margin-left: -2rem;
-  margin-right: -2rem;
   background: radial-gradient(circle at calc(50% + 100px) 50%,
       #faf8f8,
       #ede3e5 700px);
-  padding: 2.5rem;
-  border-radius: 0;
 }
 
-@media (min-width: 768px) {
-  .why-choose {
-    margin-left: 0;
-    margin-right: 0;
-    border-radius: var(--border-radius);
-  }
-}
+
 
 .why-choose h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 .benefits-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 768px) {
   .benefits-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -449,15 +438,15 @@ section {
 
 .benefit-card {
   background-color: white;
-  padding: 2rem 1.5rem;
-  border-radius: 0.5rem;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .benefit-card-header {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   gap: 1rem;
 }
 
@@ -574,7 +563,7 @@ section {
 }
 
 /* Early access section */
-#early-access {
+.early-access {
   padding: 5rem 0;
   background-color: white;
 }
@@ -996,7 +985,7 @@ nav {
 }
 
 .blog-overview {
-  padding: 7rem 0 2rem;
+  padding: 7rem 0 0;
   background-color: white;
   
   .post-meta {
@@ -1013,8 +1002,10 @@ nav {
   img + .post-content-preview {
     margin-left: 1.5rem;
   }
-  .btn  {
+  .more-link  {
+    display: inline-block;
     margin-top: 1rem;
+    font-weight: 600;
   }
 
 }
@@ -1023,7 +1014,7 @@ nav {
   margin: 0 auto;
 }
 .post-content {
-  padding-bottom: 2rem;
+  padding-bottom: 0;
 }
 
 /* Cookie Consent Banner */
