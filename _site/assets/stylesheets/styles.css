@@ -48,20 +48,12 @@ img {
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: .95rem;
-  line-height: 24px;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
   color: white;
   border: none;
-}
-.btn-disabled {
-  background-color: var(--neutral-light-color);
-  color: white;
-  border: none;
-  cursor: not-allowed;
-  opacity: .3;
 }
 
 
@@ -477,19 +469,26 @@ section {
 
 /* Plans section */
 #plans {
+  background: linear-gradient(to bottom right, #f4f4f4, #fff);
   padding: 2.5rem 0;
-
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 15px 10px -10px, rgba(0, 0, 0, 0.15) 0px -15px 10px -10px;
+  box-shadow: rgba(33, 35, 38, 0.2) 0px 10px 10px -10px, rgba(0, 0, 0, 0.2) 0px -10px 10px -10px;
+  position: relative;
+  z-index: 99;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .plans-grid {
   display: grid;
   gap: 2rem;
+  max-width: 48rem;
   margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .plans-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -505,6 +504,10 @@ section {
 
 }
 
+.plan-card:hover {
+  border-color: var(--soft-purple);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+}
 
 .plan-header {
   display: flex;
@@ -548,23 +551,33 @@ section {
 
 .plan-note {
   text-align: center;
-  margin-top: 2rem;
   color: var(--neutral-color);
+  margin-top: 2rem;
+  font-size: 0.875rem;
 }
 
+.plans-tagline {
+  font-weight: 500;
+  text-align: center;
+  margin-top: 0.5rem;
+}
 
 /* Early access section */
 .early-access {
-  padding: 0 0 5rem 0;
+  padding: 5rem 0;
   background-color: white;
 }
 
+.early-access-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
 
 .early-access-box {
   background: radial-gradient(circle at calc(50% + 100px) 50%,
       #e26283,
       var(--dark-purple) 500px);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  box-shadow: 6.4em 9.1em 4.5em 0 rgba(0, 0, 0, .01), 3.6em 5.1em 3.8em 0 rgba(0, 0, 0, .03), 1.6em 2.3em 2.8em 0 rgba(0, 0, 0, .06), .4em .6em 1.5em 0 rgba(0, 0, 0, .06), 0 0 0 0 rgba(0, 0, 0, .06);
   padding: 3rem 2rem 0 2rem;
   border-radius: var(--border-radius);
 
@@ -576,9 +589,6 @@ section {
       color: white;
       margin-bottom: 1rem;
       font-weight: 500;
-    }
-    p {
-      font-size: 1.125rem;
     }
 
   }
