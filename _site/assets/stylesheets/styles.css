@@ -37,6 +37,9 @@ a {
 img {
   max-width: 100%;
 }
+strong {
+    font-weight: 600;
+  }
 
 /* Button styles */
 .btn {
@@ -332,9 +335,9 @@ section {
 }
 
 .section-heading p {
-          font-size: 1.125rem;
+  font-size: 1.125rem;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 1rem auto 0;
   font-weight: 300;
 }
 
@@ -362,20 +365,12 @@ section {
 #features {
   background-color: white;
   padding-top: 0;
+
 }
 
 .features-grid {
   display: grid;
   gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.feature-card {
   padding: 2rem;
   border: 1px solid rgba(229, 222, 255, 0.3);
   border-radius: var(--border-radius);
@@ -384,7 +379,29 @@ section {
       #fff 400px);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.about-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  p {
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+  }
 }
 
 
@@ -404,11 +421,21 @@ section {
   }
 }
 
-.feature-card h3 {
-  font-size: 1.25rem;
+.feature-card h2 {
+  font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.feature-card h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  text-align: center;
 }
 
 .feature-card p {
@@ -416,6 +443,7 @@ section {
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.6;
+  margin-top: auto;
 }
 
 .why-choose {
