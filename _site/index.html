@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marbles - Your Private Space for Plans & Thoughts</title>
-    <meta name="description" content="All-in-one tool for journaling, tracking habits, managing simple lists and jotting down random thoughts." />
+    <title>Marbles App - A Private Space for Your Plans and Thoughts</title>
+    <meta name="description" content="All-in-one lightweight tool for keeping notes, managing lists and writing journals." />
     <meta name="author" content="Infonominal" />
     <meta property="og:type" content="website">
     <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96" />
@@ -56,12 +56,13 @@
         padding: 1rem 2rem;
         border: none;
         border-radius: 99px;
-        border: 1px solid white;
-        color: white;
-        background-color: #cb3a60;
+        font-family: 'Figtree', sans-serif;
+        color: black;
+        background-color: #ddd2c5;
 
         font-weight: 500;
-        font-size: 1rem;
+        font-size: .9rem;
+        letter-spacing: .5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
         white-space: nowrap;
@@ -69,7 +70,7 @@
         line-height: 1.5rem;
 
         &:hover {
-          background-color: #9b2342;
+          background-color: #bcb1a5;
         }
       }
 
@@ -168,9 +169,10 @@
 </header>
 
     <main class="home">
-      <section class="hero">  
+
+      <section class="hero">
         <div class="container">
-          <h1 class="animate-fade-in">Marbles: A Private Space for Your Plans & Thoughts</h1>
+          <h1 class="animate-fade-in">A Private Space for Your Plans & Thoughts</h1>
           <p class="hero-description animate-fade-in animation-delay-400">
             Marbles helps you capture thoughts, make sense of your days, and stay on top of the little things - all in one simple space.
           </p>
@@ -178,9 +180,24 @@
           <div class="tags animate-fade-in animation-delay-200">
 
             <div class="tag-container">
-              <span class="tag"><img src="img/note.svg" /><span>Notes</span></span>
-              <span class="tag"><img src="img/list.svg" /><span>Lists</span></span>
-              <span class="tag"><img src="img/journal.svg" /><span>Journals</span></span>
+              <span class="tag">
+                <span class="tag-icon tag-icon-1">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.33334 14.6666H6.66668C4.15252 14.6666 2.89544 14.6666 2.11439 13.8856C1.33334 13.1046 1.33334 11.8474 1.33334 9.33331V6.66665C1.33334 4.15249 1.33334 2.89541 2.11439 2.11436C2.89544 1.33331 4.15914 1.33331 6.68654 1.33331C7.09054 1.33331 7.41428 1.33331 7.68668 1.34442C7.67774 1.39771 7.67301 1.45207 7.67281 1.50703L7.66668 3.39663C7.66661 4.12803 7.66654 4.77441 7.73661 5.29542C7.81254 5.86017 7.98688 6.42482 8.44774 6.88565C8.90854 7.34651 9.47321 7.52085 10.0379 7.59678C10.559 7.66685 11.2053 7.66678 11.9367 7.66671H12H14.6383C14.6667 8.02291 14.6667 8.46005 14.6667 9.04191V9.33331C14.6667 11.8474 14.6667 13.1046 13.8856 13.8856C13.1046 14.6666 11.8475 14.6666 9.33334 14.6666Z"></path><path d="M12.9011 5.07779L10.2619 2.70252C9.51006 2.02581 9.13412 1.68745 8.67279 1.51044L8.66666 3.33343C8.66666 4.90478 8.66666 5.69045 9.15479 6.1786C9.64299 6.66676 10.4287 6.66676 12 6.66676H14.3867C14.145 6.19728 13.7123 5.80778 12.9011 5.07779Z"></path></svg>
+                </span>
+                <span>Notes</span>
+              </span>
+              <span class="tag">
+                <span class="tag-icon tag-icon-2">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M6.33331 1.33331C5.78103 1.33331 5.33331 1.78103 5.33331 2.33331V2.99998C5.33331 3.55227 5.78103 3.99998 6.33331 3.99998H9.66665C10.2189 3.99998 10.6666 3.55227 10.6666 2.99998V2.33331C10.6666 1.78103 10.2189 1.33331 9.66665 1.33331H6.33331Z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M4.33333 2.6911C3.49473 2.73815 2.96532 2.87178 2.58579 3.25131C2 3.8371 2 4.77991 2 6.66553V10.6656C2 12.5512 2 13.494 2.58579 14.0798C3.17157 14.6656 4.11438 14.6656 6 14.6656H10C11.8856 14.6656 12.8284 14.6656 13.4142 14.0798C14 13.494 14 12.5512 14 10.6656V6.66553C14 4.77991 14 3.8371 13.4142 3.25131C13.0347 2.87178 12.5053 2.73815 11.6667 2.6911V3.00002C11.6667 4.10459 10.7713 5.00002 9.66667 5.00002H6.33333C5.22877 5.00002 4.33333 4.10459 4.33333 3.00002V2.6911ZM4.66667 6.50002C4.39053 6.50002 4.16667 6.72389 4.16667 7.00002C4.16667 7.27615 4.39053 7.50002 4.66667 7.50002H5C5.27614 7.50002 5.5 7.27615 5.5 7.00002C5.5 6.72389 5.27614 6.50002 5 6.50002H4.66667ZM7 6.50002C6.72387 6.50002 6.5 6.72389 6.5 7.00002C6.5 7.27615 6.72387 7.50002 7 7.50002H11.3333C11.6095 7.50002 11.8333 7.27615 11.8333 7.00002C11.8333 6.72389 11.6095 6.50002 11.3333 6.50002H7ZM4.66667 8.83335C4.39053 8.83335 4.16667 9.05722 4.16667 9.33335C4.16667 9.60949 4.39053 9.83335 4.66667 9.83335H5C5.27614 9.83335 5.5 9.60949 5.5 9.33335C5.5 9.05722 5.27614 8.83335 5 8.83335H4.66667ZM7 8.83335C6.72387 8.83335 6.5 9.05722 6.5 9.33335C6.5 9.60949 6.72387 9.83335 7 9.83335H11.3333C11.6095 9.83335 11.8333 9.60949 11.8333 9.33335C11.8333 9.05722 11.6095 8.83335 11.3333 8.83335H7ZM4.66667 11.1667C4.39053 11.1667 4.16667 11.3906 4.16667 11.6667C4.16667 11.9428 4.39053 12.1667 4.66667 12.1667H5C5.27614 12.1667 5.5 11.9428 5.5 11.6667C5.5 11.3906 5.27614 11.1667 5 11.1667H4.66667ZM7 11.1667C6.72387 11.1667 6.5 11.3906 6.5 11.6667C6.5 11.9428 6.72387 12.1667 7 12.1667H11.3333C11.6095 12.1667 11.8333 11.9428 11.8333 11.6667C11.8333 11.3906 11.6095 11.1667 11.3333 11.1667H7Z"></path></svg>
+                </span>
+                <span>Lists</span>
+              </span>
+              <span class="tag">
+                <span class="tag-icon tag-icon-3">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M14.6667 9.33333V8C14.6667 7.44067 14.6667 6.94353 14.6581 6.5H1.34197C1.33337 6.94353 1.33337 7.44067 1.33337 8V9.33333C1.33337 11.8475 1.33337 13.1046 2.11442 13.8856C2.89547 14.6667 4.15255 14.6667 6.66671 14.6667H9.33337C11.8475 14.6667 13.1046 14.6667 13.8856 13.8856C14.6667 13.1046 14.6667 11.8475 14.6667 9.33333Z"></path><path d="M5.16672 1.66669C5.16672 1.39055 4.94286 1.16669 4.66672 1.16669C4.39058 1.16669 4.16672 1.39055 4.16672 1.66669V2.71953C3.20717 2.79636 2.57724 2.98493 2.11444 3.44773C1.65164 3.91053 1.46306 4.54047 1.38623 5.50002H14.6139C14.5371 4.54047 14.3485 3.91053 13.8857 3.44773C13.4229 2.98493 12.7929 2.79636 11.8334 2.71953V1.66669C11.8334 1.39055 11.6095 1.16669 11.3334 1.16669C11.0573 1.16669 10.8334 1.39055 10.8334 1.66669V2.67529C10.3899 2.66669 9.89272 2.66669 9.33339 2.66669H6.66672C6.10737 2.66669 5.61024 2.66669 5.16672 2.67529V1.66669Z"></path></svg>
+                </span>
+                <span>Journals</span>
+              </span>
             </div>
           </div>
 
@@ -194,60 +211,83 @@
 
       </section>
       <section class="hero-image-section">
-        <div class="container">
+        <div class="hero-image animate-fade-in animation-delay-500">
+          <div class="hero-image-placeholder" >
+            <img src="img/notes-light.webp" alt="Marbles App Screenshot" class="hero-image-screenshot" />
+          </div>
+        </div>
+        <div class="container" style="padding-top: 4rem">
         <div class="section-heading">
-          <h2>Because your thoughts don’t fit in one box</h2>
+
           <div class="about-grid">
+            <h3>For people who don’t like planners, but still want their mind to feel clearer.</h3>
           <p>Your mind jumps between ideas, tasks, and feelings - and forcing it into rigid tools just makes things harder. Using several different apps only adds to the noise.</p>
           <p>Marbles gives you one calm place for everything: <strong>lists</strong> when you need structure, <strong>notes</strong> when you need clarity, and <strong>journals</strong> when you need reflection.</p>
+          <h3>What you can do here</h3>
+
+          <p>You can write down anything that’s on your mind.<br/>
+              You can come back later and sort it into journals, lists, or notebooks.<br/>
+              You can keep everything in one place, without feeling like you have to decide what it “is” right away.</p>
           <p>Write first, organize gradually, reflect anytime. Marbles supports a simple, flexible workflow that adapts to your mind, not the other way around.</p>
           </div>
-          
+
         </div>
         </div>
 
-        <div class="hero-image animate-fade-in animation-delay-500">
-          <div class="hero-image-placeholder">
-            <img src="img/marbles-screenshot.webp" alt="Marbles App Screenshot" class="hero-image-screenshot" />
-          </div>
+
+      </section>
+      <section id="inbox-screenshot">
+        <div class="container">
+          <img src="img/inbox-dark.webp" alt="Marbles inbox" />
         </div>
       </section>
 
       <section id="features">
         <div class="container">
-          
+
 
           <div class="features-grid">
-            
+
 
             <div class="feature-card">
-              <div class="feature-header">
-                <img src="img/ideas.webp" alt="Organizer" />
-                <h2>Notes</h2>
-                <h3>For all the brain-dump moments</h3>
-              </div>
-
-              <p>When your head feels full, open a note and unload it. Ideas, reminders, half-thoughts... write freely without worrying about structure.
+              <img src="img/ideas.webp" alt="Inbox" />
+              <div class="feature-content">
+                <h2>Inbox</h2>
+                <h3>- for all the brain-dump moments</h3>
+                <p>When your head feels full, open the inbox and unload it. Ideas, reminders, half-thoughts... write freely without worrying about structure.
               </p>
+              </div>
             </div>
 
             <div class="feature-card">
-              <div class="feature-header">
-                <img src="img/feature-list.webp" alt="Habit tracking" />
+              <img src="img/feature-list.webp" alt="List management" />
+              <div class="feature-content">
                 <h2>Lists</h2>
-                <h3>For organising and staying on track</h3>
+                <h3>- for organizing and staying on track</h3>
+                <p>Groceries, packing lists, weekend tasks, long-term goals... drag, drop, reorder, and check things off with zero friction.</p>
               </div>
-              <p>Groceries, packing lists, weekend tasks, long-term goals - if you can think it, you can list it. Drag, drop, reorder, and check things off with zero friction.</p>
+
+            </div>
+            <div class="feature-card">
+              <img src="img/notebook.webp" alt="Notebooks" />
+              <div class="feature-content">
+                <h2>Notebooks</h2>
+                <h3>- for keeping things you’re working on</h3>
+                <p>Space for your hobbies, projects, and ongoing ideas. Use notebooks when something in your life deserves a little room to grow.</p>
+              </div>
+
             </div>
 
             <div class="feature-card">
-              <div class="feature-header">
-                <img src="img/girl.webp" alt="Journaling" />
+              <img src="img/girl.webp" alt="Journaling" />
+              <div class="feature-content">
+
                 <h2>Journals</h2>
-                <h3>For reflecting and making sense of things</h3>
+                <h3>- for reflecting and making sense of things</h3>
+                <p>A simple place to look back on your day when you feel like it. Notice patterns, celebrate wins and understand yourself a little better.</p>
               </div>
 
-              <p>A simple place to look back on your day when you feel like it. Notice patterns, celebrate wins and understand yourself a little better.</p>
+
             </div>
 
             <!-- <div class="feature-card">
@@ -264,13 +304,16 @@
         </div>
       </section>
 
-      
 
-      
+
+
       <section class="why-choose">
         <div class="container">
+          <div class="section-heading">
+            <h2>Why Choose Marbles?</h2>
+          </div>
 
-            <h3>Why Choose Marbles?</h3>
+
             <div class="benefits-grid">
               <div class="benefit-card">
                 <div class="benefit-card-header">
@@ -297,7 +340,7 @@
                 <p>Marbles is designed with small usability gems like quick list management, adjustable fonts, light and dark mode, keyboard support, making it simple and enjoyable to use every day. No complex setup and workflows, just straightforward online tools.</p>
               </div>
 
-              
+
 
               <div class="benefit-card">
                 <div class="benefit-card-header">
@@ -309,6 +352,13 @@
 
 
             </div>
+
+        </div>
+      </section>
+      <section id="screenshots">
+        <div class="container">
+          <img src="img/lists-light.webp" class="screenshot screenshot-1" alt="Marbles lists light mode" />
+          <img src="img/lists-dark.webp" class="screenshot screenshot-2" alt="Marbles lists dark mode" />
 
         </div>
       </section>
@@ -375,7 +425,7 @@
             <div class="plan-card">
               <div class="plan-header">
                 <div>
-                  <div class="plan-type">Standard Plan</div>
+                  <div class="plan-type disabled">Standard Plan</div>
                 </div>
                 <div class="plan-price">$9/month</div>
               </div>
@@ -425,7 +475,7 @@
             <div class="plan-card">
               <div class="plan-header">
                 <div>
-                  <div class="plan-type">Large Plan</div>
+                  <div class="plan-type disabled">Large Plan</div>
                 </div>
                 <div class="plan-price">$16/month</div>
               </div>
@@ -472,15 +522,15 @@
 
               <button class="btn btn-disabled" style="display: block; width: 100%;" disabled >Select</button>
             </div>
-            
-          </div>
-          <p class="plan-note">Plans will be available once we officially launch. <br/>In the meantime, feel free to join our free closed beta.</p>
 
-          
+          </div>
+          <p class="plan-note">Paid plans will be available once we officially launch. <br/>In the meantime, feel free to join our free closed beta.</p>
+
+
         </div>
       </section>
 
-      
+
     </main>
 
 
