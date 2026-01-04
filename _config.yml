@@ -33,6 +33,8 @@ exclude:
 # Include
 include:
   - _pages
+  - ml-confirmation-1.html
+  - ml-confirmation-2.html
 
 # Sass
 sass:
