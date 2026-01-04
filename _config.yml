@@ -29,8 +29,6 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
-  - ml-confirmation-1.html
-  - ml-confirmation-2.html
 
 # Include
 include:

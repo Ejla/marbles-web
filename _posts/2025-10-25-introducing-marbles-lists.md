@@ -4,11 +4,11 @@ title: "Introducing Marbles Lists: Flexibility Meets Simplicity"
 excerpt: "For those who love organizing life with lists - be it what to buy, remember, do, or pack - Marbles lists are the perfect tool. Simple, but powerful and flexible."
 ---
 
-For those who love organizing life with lists - be it what to buy, remember, do, or pack - finding the perfect tool can be surprisingly challenging. Many apps either drown you in features or limit your flexibility. 
+For those who love organizing life with lists - be it what to buy, remember, do, or pack - finding the perfect tool can be surprisingly challenging. Many apps either drown you in features or limit your flexibility.
 
 What if you could have a lightweight tool designed from the ground up to give you maximum control over your checklists without unnecessary complexity?
 
-<img src="/img/blog/marbles-list.webp" alt="Marbles lists" style="width: 100%; max-width: 750px; border-radius: 30px; margin: 10px auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,.08); border: 1px solid #eee;">
+<img src="/img/lists-light.webp" alt="Marbles lists" style="border-radius: 1rem; margin: 10px auto; display: block; box-shadow: 0 4px 20px rgba(0,0,0,.08); border: 1px solid #eee; margin-left: -16px; margin-right: -16px;">
 
 ## What you can do with Marbles Lists
 
@@ -35,4 +35,3 @@ The market is crowded with productivity apps, but simple, specialized checklist 
 ## Plans for the near future
 
 Additional features are coming soon, like search/filter capabilities, recurring reminders, more keyboard shortcuts for power users, and offline support with syncing.
-
