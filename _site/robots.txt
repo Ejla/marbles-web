@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /ml-confirmation-1.html
+Disallow: /ml-confirmation-2.html
 
 Sitemap: https://yourmarbles.app/sitemap.xml

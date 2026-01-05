@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/blog/2025/10/12/welcome-to-marbles/</loc>
+<loc>https://yourmarbles.app/blog/2025/10/12/welcome-to-marbles/</loc>
 <lastmod>2025-10-12T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2025/10/15/why-client-side-encryption-matters/</loc>
+<loc>https://yourmarbles.app/blog/2025/10/15/why-client-side-encryption-matters/</loc>
 <lastmod>2025-10-15T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2025/10/19/challenges-of-client-side-encryption/</loc>
+<loc>https://yourmarbles.app/blog/2025/10/19/challenges-of-client-side-encryption/</loc>
 <lastmod>2025-10-19T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/blog/2025/10/25/introducing-marbles-lists/</loc>
+<loc>https://yourmarbles.app/blog/2025/10/25/introducing-marbles-lists/</loc>
 <lastmod>2025-10-25T00:00:00+02:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/blog/</loc>
+<loc>https://yourmarbles.app/blog/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>https://yourmarbles.app/</loc>
 </url>
 </urlset>
