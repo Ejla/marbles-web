@@ -14,6 +14,45 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Marbles" />
     <link rel="manifest" href="/site.webmanifest" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Marbles App",
+        "url": "https://yourmarbles.app",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Web",
+        "description": "Marbles is a creative workspace for personal projects, combining Notes, Lists, and Journals in one unified tool. Capture ideas, manage lists, organize notes, and reflect on your creative growth.",
+        "keywords": [
+          "creative workspace",
+          "personal project management",
+          "idea incubation",
+          "notes",
+          "lists",
+          "journals",
+          "project planning",
+          "personal growth",
+          "creative projects",
+          "non-linear workflow"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "url": "https://keep.yourmarbles.app/register",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock"
+        },
+        "featureList": [
+          "Capture ideas in Inbox",
+          "Organize tasks in Lists",
+          "Keep knowledge base in Notes",
+          "Reflect on progress in Journals",
+          "Group Notes, Lists and Journals in Projects",
+          "Non-linear, flexible workflow",
+          "Minimal, distraction-free interface"
+        ]
+      }
+    </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet">
@@ -58,8 +97,8 @@
         border: none;
         border-radius: 99px;
         font-family: 'Figtree', sans-serif;
-        color: black;
-        background-color: #ddd2c5;
+        color: white;
+        background-color: #CB3A60;
 
         font-weight: 500;
         font-size: .9rem;
@@ -71,7 +110,7 @@
         line-height: 1.5rem;
 
         &:hover {
-          background-color: #bcb1a5;
+          background-color: #a12b4a;
         }
       }
 
@@ -156,7 +195,7 @@
     <nav class="nav-links">
       <a href="/" >Home</a>
       <a href="/blog" class="active">Articles</a>
-      <a href="#early-access-section" class="btn btn-secondary">Get Early Access</a>
+      <a href="https://keep.yourmarbles.app" class="btn btn-secondary">Sign in</a>
     </nav>
     <button class="mobile-menu-btn">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -168,6 +207,7 @@
     </button>
   </div>
 </header>
+
 
     <article>
   <section class="hero">
@@ -225,9 +265,9 @@
   <div class="container early-access-container">
     <div class="early-access-box">
       <div class="early-access-intro">
-        <h2>Get Early Access!</h2>
-        <p>Join our free closed beta and be among the first to try Marbles!</p>
-        <p>Subscribe to our newsletter to receive your exclusive access code as soon as it becomes available.</p>
+        <h2>Get Early Access</h2>
+        <p>Join the free closed beta and be among the first to try Marbles.</p>
+        <p>Subscribe to receive your access code when it becomes available.</p>
       </div>
 
 
@@ -304,6 +344,7 @@
     </div>
   </div>
 </section>
+
 
     <footer>
   <div class="container footer-container">
